@@ -21,38 +21,32 @@
 <br>
 Type of surface: Vertical / Horizontally upward / Horizontally downward:
 <br><br>
-
-<table border="1" >
-
-    <tr  style="background-color: #000; color: #FFF;">
-        <th style="text-align : center; padding:10px; width: 160px;">Serial No.</th><th style="text-align : center;padding:10px; ">Rebound value</th><th style="text-align : center;padding:10px; ">Outlier, Yes/No</th>
-    </tr>
-
-    <tr>
-        <td  style="width: 160px;">1.</td><td  ></td><td ></td>
-    </tr>
-
-    <tr>
-        <td style="width: 160px;">2.</td><td ></td><td ></td>
+<table>
+    <tr style="background-color: #000; color: #FFF;">
+        <th style="text-align : center; padding:10px; width: 60px;">Serial No.</th>
+        <th style="text-align : center; padding:10px; ">Rebound value</th>
+        <th style="text-align : center; padding:10px; ">Outlier, Yes/No</th>
     </tr>
     <tr>
-        <td style="width: 160px;">3.</td><td ></td><td ></td>
+        <td>1.</td><td  ></td><td ></td>
     </tr>
-
-     <tr>
-        <td style="width: 160px;">4.</td><td ></td><td ></td>
+    <tr>
+        <td style="width: 60px;">2.</td><td ></td><td ></td>
     </tr>
-
-      <tr>
-        <td style="width: 160px;">5.</td><td ></td><td ></td>
+    <tr>
+        <td style="width: 60px;">3.</td><td ></td><td ></td>
     </tr>
-
-      <tr>
-        <td style="width: 160px;">6.</td><td ></td><td ></td>
+    <tr>
+        <td style="width: 60px;">4.</td><td ></td><td ></td>
     </tr>
-
-       <tr>
-        <td style="width: 160px;">Rebound Index (average after removing outliers)</td><td ></td><td ></td>
+    <tr>
+        <td style="width: 60px;">5.</td><td ></td><td ></td>
+    </tr>
+    <tr>
+        <td>6.</td><td ></td><td ></td>
+    </tr>
+    <tr>
+        <td style="width: 60px;">Rebound Index (average after removing outliers)</td><td ></td><td ></td>
     </tr>
 </table>
 <br>
