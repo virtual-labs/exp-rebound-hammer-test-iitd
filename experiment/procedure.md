@@ -46,7 +46,7 @@ Type of surface: Vertical / Horizontally upward / Horizontally downward:
         <td>6.</td><td ></td><td ></td>
     </tr>
     <tr>
-        <td width="160px">Rebound Index (average after removing outliers)</td><td ></td><td ></td>
+        <td width="200px">Rebound Index (average after removing outliers)</td><td ></td><td ></td>
     </tr>
 </table>
 <br>
