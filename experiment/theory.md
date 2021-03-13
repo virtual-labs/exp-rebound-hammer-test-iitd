@@ -2,7 +2,7 @@
 
 <strong>Background:</strong> In an actual structureonsite, it is not always possible to estimate the strength of concrete directly. Some estimates of the quality of concrete as well as of the uniformity of casting of a structure can, however, be obtained by non-destructive techniques such as rebound hammer test and ultra-sonic pulse (UPS) tests.Rebound hammeras shown in the figure below, also called Schmidt Hammer,measures the hardness of a material surface by the measuring the rebound of a standard mass after an elastic impact against the surface. The mass is released from a standard pre-compressed spring, thus having a fixed amount of energy. The distance travelled by the mass after this elastic impact expressed as a percentage of original distance is termed as rebound number. The rebound numbergives a reasonable estimate of the strength with the help of suitable correlations between rebound number and strength. The impact energy required for rebound hammers for different applications related to concrete structures is given in the following table.<br><br>
 <img src="images/t1.jpg" height="100px"><br><br><br><br>  
-<table border="1" style="text-align: center;">
+<table style="text-align: center;">
     <tr  style="background-color: #000; color: #FFF;">
         <th style="text-align : center; padding:10px;">Serial No.</th>
         <th style="text-align : center;padding:10px; ">Application</th>
@@ -45,10 +45,10 @@ An outlier is an observation that appears to be inconsistent with the rest of a 
 It can be assumed that the compressive strength of concrete follows a normal distribution (also known as Gaussian distribution). The graphical normal probability plot can be used to test the validity of the normality assumption.One or more outliers on either side of a normal data set can be detected by using a procedure known as the generalized extreme studentized deviate (GESD) many-outlier procedure.
 <br><br>
 <strong>Apparatus:</strong> 
-   <table border="1" style="text-align: center;">
-    <tr  style="background-color: #000; color: #FFF;">
+   <table style="text-align: center;">
+    <tr style="background-color: #000; color: #FFF;">
         <th style="text-align : center; padding:10px;">Name</th>
-        <th style="text-align : center;padding:10px; ">Accuracy/Least count</th>
+        <th style="text-align : center; padding:10px; ">Accuracy/Least count</th>
     </tr>
     <tr>
         <td  style="padding: 10px;">Rebound Hammer</td>
