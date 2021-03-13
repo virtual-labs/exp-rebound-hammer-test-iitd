@@ -31,22 +31,22 @@ Type of surface: Vertical / Horizontally upward / Horizontally downward:
         <td>1.</td><td  ></td><td ></td>
     </tr>
     <tr>
-        <td style="width: 60px;">2.</td><td ></td><td ></td>
+        <td>2.</td><td ></td><td ></td>
     </tr>
     <tr>
-        <td style="width: 60px;">3.</td><td ></td><td ></td>
+        <td>3.</td><td ></td><td ></td>
     </tr>
     <tr>
-        <td style="width: 60px;">4.</td><td ></td><td ></td>
+        <td>4.</td><td ></td><td ></td>
     </tr>
     <tr>
-        <td style="width: 60px;">5.</td><td ></td><td ></td>
+        <td>5.</td><td ></td><td ></td>
     </tr>
     <tr>
         <td>6.</td><td ></td><td ></td>
     </tr>
     <tr>
-        <td style="width: 60px;">Rebound Index (average after removing outliers)</td><td ></td><td ></td>
+        <td width="160px">Rebound Index (average after removing outliers)</td><td ></td><td ></td>
     </tr>
 </table>
 <br>
