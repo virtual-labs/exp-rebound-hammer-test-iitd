@@ -1,1 +1,1 @@
-### Aim of the experiment
+#### To test the concrete specimens by the non-destructive test methods namely rebound hammer test.
