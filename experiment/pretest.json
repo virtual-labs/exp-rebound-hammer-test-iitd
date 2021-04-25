@@ -1,1 +1,46 @@
-[{"question":"1.Which of the following is not an indirect test?","answers":{"a":"Rebound hammer test","b":" Windsor Probe","c":"Core test","d":"Ultrasound test"},"correctAnswer":"c"},{"question":"2. The principle behind rebound hammer test is_____.","answers":{"a":"rebound of an elastic mass depends on the hardness of the surface it strikes","b":"rebound of an elastic mass depends on the roughness of the surface it strikes","c":"rebound of an inelastic mass depends on the adhesion of the surface it strikes","d":"rebound of an inelastic mass depends on the hardness of the surface it strikes"},"correctAnswer":"a"},{"question":"3. What is the minimum distance required between testing points and edge of sample as per IS:516?","answers":{"a":"25 mm","b":"10 mm","c":"15 mm","d":"20 mm"},"correctAnswer":"a"},{"question":"4. what is the minimum number of readings should be taken on each face of sample in the experiment as per IS:516?","answers":{"a":"6","b":"9","c":"8","d":"7"},"correctAnswer":"a"},{"question":"5. rebound index doesn't depend on which of the following?","answers":{"a":"Type of aggregate","b":"Type of reinforcements","c":"Type of cement","d":"Surface moisture content"},"correctAnswer":"b"}]
+[{
+	"question": "1.Which of the following is not an indirect test?",
+	"answers": {
+		"a": "Rebound hammer test",
+		"b": " Windsor Probe",
+		"c": "Core test",
+		"d": "Ultrasound test"
+	},
+	"correctAnswer": "c"
+}, {
+	"question": "2. The principle behind rebound hammer test is_____.",
+	"answers": {
+		"a": "rebound of an elastic mass depends on the hardness of the surface it strikes",
+		"b": "rebound of an elastic mass depends on the roughness of the surface it strikes",
+		"c": "rebound of an inelastic mass depends on the adhesion of the surface it strikes",
+		"d": "rebound of an inelastic mass depends on the hardness of the surface it strikes"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "3. What is the minimum distance required between testing points and edge of sample as per IS:516?",
+	"answers": {
+		"a": "25 mm",
+		"b": "10 mm",
+		"c": "15 mm",
+		"d": "20 mm"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "4. what is the minimum number of readings should be taken on each face of sample in the experiment as per IS:516?",
+	"answers": {
+		"a": "6",
+		"b": "9",
+		"c": "8",
+		"d": "7"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "5. rebound index doesn't depend on which of the following?",
+	"answers": {
+		"a": "Type of aggregate",
+		"b": "Type of reinforcements",
+		"c": "Type of cement",
+		"d": "Surface moisture content"
+	},
+	"correctAnswer": "b"
+}]
