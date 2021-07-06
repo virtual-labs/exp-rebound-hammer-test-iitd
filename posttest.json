@@ -1,0 +1,19 @@
+[{
+	"question": "1. Rebound number is an index of hardness up to a depth of ______ mm.",
+	"answers": {
+		"a": "50",
+		"b": "30",
+		"c": "45",
+		"d": "25"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "2. It is essential that the rebound hammer is held at aright angle to the tested surface to avoid:",
+	"answers": {
+		"a": "Frictional sliding of the plunger tip",
+		"b": "Material removal bychipping",
+		"c": "Partial transfer of energy to and from thehammer",
+		"d": "All of the above"
+	},
+	"correctAnswer": "d"
+}]

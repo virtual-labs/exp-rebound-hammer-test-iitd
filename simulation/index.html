@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hammer Test</title>
+    
+
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="jquerymin.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- <script src="https://kit.fontawesome.com/afa6483c49.js" crossorigin="anonymous"></script> -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"type="text/css">
+    <link href="bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="iitstyle.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="main.js"></script>
+
+<!-- Online Link -->
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+<!-- Offline Link -->
+  <script src="graph_lib/chartist.min.js"></script>
+  <link href="graph_lib/chartist.min.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+
+@keyframes dashoffset-seven {
+  0% {
+    stroke-dashoffset: 7px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+.ct-chart .ct-label.ct-vertical,
+.ct-chart .ct-label.ct-horizontal {
+  color: rgba(0, 0, 0, 1);
+}
+
+.ct-chart .ct-grid.ct-vertical,
+.ct-chart .ct-grid.ct-horizontal {
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-dasharray: 2px;
+  shape-rendering: crispEdges;
+}
+
+.ct-chart .ct-series .ct-line {
+  stroke: #C7F464;
+  stroke-width: 2px;
+  stroke-dasharray: 5px 2px;
+  animation: dashoffset-seven 200ms infinite linear;
+}
+
+</style>
+
+    <script>
+
+        var simsubscreennum=0;
+
+        var temp=0;
+
+    </script>
+
+</head>
+
+<body style="margin:0; font-family: verdana;" >
+<table align="center">
+<tr><td>
+    <div id="simscreen">
+
+        <div id="title"><h3>REBOUND HAMMER TEST OF CONCRETE</h3></div>
+
+
+<!-- Step 0 -->
+
+
+
+        <div class="simsubscreen" id="canvas1" ></br>
+
+       <!--  <strong class="incanvas">STEP</strong>
+
+        <span class="circlebg">&nbsp;1&nbsp;</span> -->
+        
+        <p class="incanvas" style="font-size:15px;"><strong>Objective:</strong></p>
+		<p class="incanvas" style="font-size:14px;">To test the concrete specimens by the non-destructive test methods namely rebound hammer test.</p></br>
+        <!-- <p class="incanvas" style="font-size:14px;">To determine the compressive strength and quality of the concrete by relating the rebound index and the compressive strength as per IS13311(2).</p></br> -->
+
+            <p class="incanvas" style="font-size:15px;"><strong>Apparatus used:</strong></p>
+
+            <p class="incanvas" style="font-size:14px;">Rebound hammer, Carborundum stone etc.
+            </p></br>
+
+             <img src="image/hammer.png"  style="position:absolute; left: 50px; top: 300px; height: 75px;" draggable="false"/>
+
+             <!-- <img src="image/hammerwb.png"  style="position:absolute; visibility: ; left: 5px; top: 340px; height: 180px; width: 550px; " draggable="false"/> -->
+
+             <img src="image/stone.png" style="position:absolute; left: 175px; top: 450px; height: 60px; width: 160px; " draggable="false"/> 
+
+ 			<img src="image/man.png"  style="position:absolute; left: 510px; top: 150px; height: 320px;" draggable="false"/>
+
+             <span class="blink_me" style="position:absolute; font-size: 30px; left:540px; top:490px; "><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <input type="button" id="" style="position:absolute; left:580px; top:490px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Start Experiment&nbsp;" onclick="navNext1()"/>
+
+        </div>
+
+<!-- Step 1 -->
+
+
+        <div class="simsubscreen" id="canvas2" style="visibility:hidden;"></br>
+
+        <div id="transwhite" style="height: 45px;" >
+
+           <p class="incanvas" style="font-size:14px;"><strong>Step 1:</strong> Enter the application and impact energy for the rebound hammer.</p>
+
+        </div>           
+
+            <!-- <table border="1px" style=" position: absolute; left:60px; top:120px; height: 200px; width: 335px;  "> -->
+
+<span style="position: absolute; top: 160px; left: 70px;"><strong>Applications</strong></span>
+<span style="position: absolute; top: 230px; left: 70px;"><strong>Approximate Impact Energy<br>for Rebound Hammer in Nm</strong></span>
+            	<select id="appIn" style="position: absolute; left: 260px; top: 155px; width: 350px; border:none; border: 1px solid #000;  padding-top: 2px; padding-bottom: 2px; font-size: 12px;">
+                
+                <option value="">--Select--</option>
+
+                <option value="aierh">For testing normal weight concrete</option>
+
+                <option value="lwcsircp">For testing light-weight concrete or small and impact sensitive part of concrete</option>
+
+                <option value="mctrhsp">For testing mass concrete, for examples in roads, air- fields pavements and hydraulic structures</option>
+
+            </select>
+
+<input type="number" id="appIn2" placeholder="Enter" style="position: absolute; left: 260px; top: 228px; width: 120px; border: ; font-size: 12px;">
+
+            <input class="btn btn-primary" id="in2" type="button" name="Submit" value="Submit" style="position: absolute; left: 260px; top: 300px; " onclick="selectindex()"/>
+<span id="outtext1" style="color: red; position: absolute; left: 70px; top: 360px;"></span>
+
+
+           <!--- <table style="width: 730px; position: absolute; left: 35px; right: 35px; top: 130px; text-align: center; border: 1px solid #000;">
+                 
+                <tbody>
+                <tr style="text-align: justify-all; background-color: #000; color: #FFF;">
+                    <td style="width: 330px; padding: 10px;"><strong>Applications</strong></td>
+                    <td style="border: 1px solid #000; width: 300px; padding: 10px; border-left-color: #FFF; "><strong>Approximate Impact Energy for Rebound Hammer in Nm</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>For normal weight concrete</strong></td>
+                    <td style="border: 1px solid #000;"><strong>2.25</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>For light weight concrete/ for small and impact resistive concrete parts</strong></td>
+                    <td style="border: 1px solid #000;"><strong>0.75</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>For mass concrete testing e.g. in roads, hydraulic structures and pavements</strong></td>
+                    <td style="border: 1px solid #000;"><strong>30.00</strong></td>
+                </tr>
+                </tbody>
+            </table>
+            --->      
+            
+             <span class="blink_me" id="barrownext1" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <span id="handarrow1" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext2()"></i></span>
+    </div>
+            
+<!-- Step 2 -->
+
+
+        <div class="simsubscreen" id="canvas3" style="visibility:hidden;"></br>
+
+        <div id="transwhite" style="height: 45px;" >
+
+           <p class="incanvas" style="font-size:14px;"><strong>Step 2:</strong> Select the orientation of face of the specimen.</p>
+
+        </div>
+            <!-- <p class="incanvas" style="font-size:14px;"> Enter the application and impact energy for the rebound hammer.</p> 
+            <span class="" id="step1a" style="font-size: large; position: absolute; left: initial;">  <strong class="incanvas"></strong> </span>-->
+
+            <select id="CaseIn" style="position: absolute; left: 560px;  top: 180px; width: 150px; border:none; border: 1px solid #000;  padding-top: 2px; padding-bottom: 2px;">
+                
+                <option value="">--Select--</option>
+                
+                <option value="hu">Vertically up</option>
+
+                <option value="hd">Vertically down</option>
+                
+                <option value="v">Horizontal</option>
+
+            </select>
+
+            <input class="incanvas" id="in2" type="button" name="Submit" value="Submit" style="position: absolute; left: 550px; top: 300px; width: 150px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" onclick="selectcase()"/>
+ 
+
+             
+
+            <img src="image/house.png" draggable="false" id="house1"  style="position:absolute; left: 40px; top: 90px; height: 450px; width: 450px;" draggable="false"/>
+
+            <img src="image/man.png" draggable="false" id="man1"  style="position:absolute; visibility: ; left: 180px; top: 250px; height: 220px; width: 100px;" draggable="false"/>
+
+            <img src="image/reboundhammer.png" draggable="false" id="handhammer"  style="position:absolute; visibility: ; left: 265px; top: 375px; height: 20px; width: 65px; transform: rotate(170deg);" draggable="false"/>
+           
+           
+             <span class="blink_me" id="barrownext2" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+            <span id="handarrow2" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext3()"></i></span>
+        
+</div> 
+
+<!-- Horizontal upward -->
+
+<!-- Step 0 -->
+
+
+        <div class="simsubscreen" id="canvas4" style="visibility:hidden;"></br>
+
+            <!-- <div id="title1"><h4>HORIZONTAL UPWARD</h4></div> -->
+
+            <span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Vertically Up&nbsp;</center></span>
+
+            <img src="image/house.png" id="house1"  style="position:absolute; left: 40px; top: 90px; height: 380px; width: 300px; " draggable="false"/>
+
+            <img src="image/curvearrow.png" id="arrowh1"  style="position:absolute; visibility: ; left: 220px; top: 85px; height: 60px; width: 200px; transform: rotate(15deg);" draggable="false"/>
+
+            <img src="image/upwall.png" id="upwall1"  style="position:absolute; visibility: ; left: 310px; top: 170px; height: 250px; width: 470px; " draggable="false"/>
+           
+            
+
+            <img src="image/frontpiller.png" id=""  style="position:absolute; visibility: ; left: 310px; top: 182px; height: 290px; width: 60px;" draggable="false"/>
+            <img src="image/frontpiller.png" id=""  style="position:absolute; visibility: ; left: 580px; top: 185px; height: 290px; width: 60px;" draggable="false"/>
+
+
+             <span class="blink_me" id="barrownext3" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+            <span id="handarrow3" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: ; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext4()"></i></span>
+        
+</div>
+
+
+<!-- Step 1 -->
+
+
+        <div class="simsubscreen" id="canvas5" style="visibility:hidden;"></br>
+
+            <!-- <div id="title1"><h4>HORIZONTAL UPWARD</h4></div> -->
+
+            <span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Vertically Up&nbsp;</center></span>
+
+                                   
+            <img src="image/upwall.png" id="upwalls1"  style="position:absolute; visibility: ; left: 10px; top: 140px; height: 420px; width: 600px;" draggable="false"/>
+
+            <img src="image/stone.png" id="stoneups1"  style="position:absolute; visibility: hidden; left: 600px; top: 170px; height: 40px; " draggable="false" onclick="usestoneups1()" />
+            
+            <img src="image/rough2.png" id="scretch1"  style="position:absolute; display: none; left: 90px; top: 183px; height: 207px; width: 450px;" draggable="false"/>
+            
+            <img src="image/stonehand.png" id="stonehandups1"  style="position:absolute; visibility: hidden; left: 600px; top: 170px; height: 80px; " draggable="false"/>
+
+            <span class="blink_me" id="barrowstoneups1" style="position:absolute; font-size: 30px; left:690px; top:165px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <img src="image/marker.png" id="markerups11"  style="position:absolute; visibility: hidden; left: 580px; top: 200px; height: 85px; " draggable="false" onclick="usemarkercond11()" />
+
+            <img src="image/handmarker.png" id="handmarkerups11"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" draggable="false" />
+
+            <img src="image/point.png" id="pointups11"  style="position:absolute; visibility: hidden; left: 150px; top: 220px; height: 20px; width: 20px;" draggable="false" />
+
+            <!-- <img src="image/marker.png" id="markerups12"  style="position:absolute; visibility: hidden; left: 560px; top: 180px; height: 140px; width: 90px;" onclick="usemarkerups12()" /> -->
+
+            <!-- <img src="image/handmarker.png" id="handmarkerups12"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" /> -->
+
+            <img src="image/point.png" id="pointups12"  style="position:absolute; visibility: hidden; left: 250px; top: 220px; height: 20px; width: 20px;"  draggable="false"/>
+
+            <!-- <img src="image/marker.png" id="markerups13"  style="position:absolute; visibility: hidden; left: 560px; top: 180px; height: 140px; width: 90px;" onclick="usemarkerups13()" /> -->
+
+            <!-- <img src="image/handmarker.png" id="handmarkerups13"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" /> -->
+
+            <img src="image/point.png" id="pointups13"  style="position:absolute; visibility: hidden; left: 350px; top: 220px; height: 20px; width: 20px;"  draggable="false"/>
+
+            <!-- <img src="image/marker.png" id="markerups14"  style="position:absolute; visibility: hidden; left: 560px; top: 180px; height: 140px; width: 90px;" onclick="usemarkerups14()" /> -->
+
+            <!-- <img src="image/handmarker.png" id="handmarkerups14"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" /> -->
+
+            <img src="image/point.png" id="pointups14"  style="position:absolute; visibility: hidden; left: 200px; top: 300px; height: 20px; width: 20px;"  draggable="false"/>
+
+            <!-- <img src="image/marker.png" id="markerups15"  style="position:absolute; visibility: hidden; left: 560px; top: 180px; height: 140px; width: 90px;" onclick="usemarkerups15()" /> -->
+
+            <!-- <img src="image/handmarker.png" id="handmarkerups15"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" /> -->
+
+            <img src="image/point.png" id="pointups15"  style="position:absolute; visibility: hidden; left: 300px; top: 300px; height: 20px; width: 20px;"  draggable="false"/>
+
+            <!-- <img src="image/marker.png" id="markerups16"  style="position:absolute; visibility: hidden; left: 560px; top: 180px; height: 140px; width: 90px;" onclick="usemarkerups16()" /> -->
+
+            <!-- <img src="image/handmarker.png" id="handmarkerups16"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" /> -->
+
+            <img src="image/point.png" id="pointups16"  style="position:absolute; visibility: hidden; left: 400px; top: 300px; height: 20px; width: 20px;" draggable="false" />
+
+
+            
+
+            <span class="blink_me" id="barrowmarkerups11" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkerups12" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkerups13" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkerups14" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkerups15" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkerups16" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+
+            <img src="image/frontpiller.png" id=""  style="position:absolute; visibility: ; left: 10px; top: 162px; height: 396px; width: 60px;" draggable="false"/>
+            <img src="image/frontpiller.png" id=""  style="position:absolute; visibility: ; left: 363px; top: 165px; height: 392px; width: 60px;" draggable="false"/>
+
+            <div id="transwhite3" style="height: 120px; visibility: ; ">
+
+            <p class="incanvas" id="stepup1a" style="font-size:14px; position: absolute; left: 0px; top: 5px;"><strong>Step 3: a).</strong> Click on Add button to add the Carborundum stone.</p>
+ 
+            <p class="incanvas" id="stepup1b" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 3: b).</strong> Click on Carborundum stone and remove any plaster or other coating from the concrete surface.</p>
+
+            <p class="incanvas" id="stepup1bn" style="font-size:14px; position: absolute; left: 0px; top: 40px; visibility: ;"><strong>Note: </strong> For testing, smooth, clean (with abrasive stone) and dry surface should be selected. Rough surfaces resulting from incomplete compaction, loss of grout, spalled or tooled surfaces do not give reliable results and should be avoided. </p>
+            <!-- <span class="" id="" style="font-size: large; visibility: hidden; position: absolute; left: initial;">  <strong class="incanvas"> b).</strong>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from the concrete surface. 
+            </span>-->
+            
+            <!-- <span class="" id="" style="font-size: large; visibility: hidden; position: absolute; left: initial;">  <strong class="incanvas"> c).</strong> 
+            </span>-->
+            <span class="blink_me" id="barrowaddups11" style="position:absolute; font-size: 30px; left:600px; top:0px; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <input type="button" id="addbtnups11" style="position:absolute; left:635px; top:8px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; padding-bottom: 2px; color: #FFF;" value="&nbsp;Add&nbsp;" onclick="addstoneups1()" >
+
+            </div>
+			<div id="transwhite2" style="height: 85px; visibility: hidden;" >
+				<p class="incanvas" id="stepup1c" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 3: c).</strong> Click on the marker to mark the points (at least six) on the concrete surface.</p>
+
+            	<p class="incanvas" id="stepup1d" style="font-size:14px; position: absolute; left: 0px; top: 40px; visibility: hidden;"><strong>Note: </strong> The point of impact should be at least 25 mm away from any edge or shape discontinuity.</p>
+             </div>
+
+             <span class="blink_me" id="barrownextups1" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+            <span id="handarrowups1" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext5()"></i></span>
+        
+</div>
+
+
+<!-- Step 2 -->
+
+
+        <div class="simsubscreen" id="canvas6" style="visibility: hidden;"></br>
+
+            <!-- <div id="title1"><h4>HORIZONTAL UPWARD</h4></div> -->
+
+            <span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Vertically Up&nbsp;</center></span>
+
+        <div id="transwhite" style=" height: 50px; ">
+
+            <p class="incanvas" id="stepup2a" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: ; "><strong>Step 4: a).</strong> Click on Add button to add the Rebound Hammer.</p>
+
+            <p class="incanvas" id="stepup2b" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: b).</strong> Click on the Rebound Hammer and press on the first mark point.</p>
+
+            <p class="incanvas" id="stepup2c" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: c).</strong> Click on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepup2d" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: d).</strong> Click again on the Rebound Hammer and press on the second mark point.</p>
+
+            <p class="incanvas" id="stepup2e" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: e).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepup2f" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: f).</strong> Click again on the Rebound Hammer and press on the third mark point.</p>
+
+            <p class="incanvas" id="stepup2g" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: g).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepup2h" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: h).</strong> Click again on the Rebound Hammer and press on the fourth mark point.</p>
+
+            <p class="incanvas" id="stepup2i" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: i).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepup2j" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: j).</strong> Click again on the Rebound Hammer and press on the fifth mark point.</p>
+
+            <p class="incanvas" id="stepup2k" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: k).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p> 
+
+            <p class="incanvas" id="stepup2l" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: l).</strong> Click again on the Rebound Hammer and press on the last mark point.</p>
+
+            <p class="incanvas" id="stepup2m" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: m).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+ 
+            <span class="blink_me" id="barrowaddups21" style="position:absolute; font-size: 30px; left:600px; top:0px; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <input type="button" id="addbtnups21" style="position:absolute; left:635px; top:8px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; padding-bottom: 2px; color: #FFF;" value="&nbsp;Add&nbsp;" onclick="addhammerups2()" >
+            </div>
+
+            <!-- <span class="blink_me" id="" style="position:absolute; font-size: 30px; left:640px; top:40px; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span> -->
+
+            
+<!-- ====================== -->
+            <img src="image/upwall.png" id=""  style="position:absolute; visibility: ; left: 10px; top: 140px; height: 420px; width: 600px; " draggable="false"/>
+
+            
+            <img src="image/rough2.png" id=""  style="position:absolute; visibility: ; left: 90px; top: 183px; height: 207px; width: 450px;"  draggable="false" />
+
+            <img src="image/point.png" id="pointups11"  style="position:absolute; left: 150px; top: 220px; height: 20px; width: 20px;"  draggable="false"/>
+
+            <img src="image/point.png" id="pointups12"  style="position:absolute; left: 250px; top: 220px; height: 20px; width: 20px;"  draggable="false"/>
+
+            <img src="image/point.png" id="pointups13"  style="position:absolute; left: 350px; top: 220px; height: 20px; width: 20px;"  draggable="false"/>
+
+            <img src="image/point.png" id="pointups14"  style="position:absolute; left: 200px; top: 300px; height: 20px; width: 20px;"  draggable="false"/>
+
+            <img src="image/point.png" id="pointups15"  style="position:absolute; left: 300px; top: 300px; height: 20px; width: 20px;"  draggable="false"/>
+
+            <img src="image/point.png" id="pointups16"  style="position:absolute; left: 400px; top: 300px; height: 20px; width: 20px;"  draggable="false"/>
+<!-- ======================-->
+             
+<!-- for point 1 -->
+
+            <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()"  draggable="false"/>
+            
+            <img src="image/hammerwithhand.png" id="hammer_hand21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; "  draggable="false" />
+            
+            <img src="image/hammerpushpinonly.png" id="hammer_pin21"  style="position:absolute; visibility: hidden; left: 37px; top: 300px; transform: rotate(90deg); height: 75px;"  draggable="false" />
+            
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_push21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; "  draggable="false" />
+
+            <img src="image/transbox.png" id="transboxrups21"  style="position:absolute; visibility: hidden; left: 140px; top: 250px; height: 130px; width: 40px; border: 0px solid black;" onclick="buttonups21()"  draggable="false"/>
+
+            <img src="image/scale2.png" id="scaleups21" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepoint1" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammerups21" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonups21" style="position:absolute; font-size: 30px; left: 100px; top: 290px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+<!-- for point 2 -->
+
+            <img src="image/hammer.png" id="hammerups21p2"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px; "  draggable="false" onclick="usehammerups31()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_hand21p2"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"/>
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pin21p2"  style="position:absolute; visibility: hidden; left: 137px; top: 300px; transform: rotate(90deg); height: 75px;" draggable="false"/>
+
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_push21p2"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"/>
+
+            <img src="image/transbox.png" id="transboxrups21p2"  style="position:absolute; visibility: hidden; left: 240px; top: 250px; height: 130px; width: 40px; border: 0px solid black;" onclick="buttonups31()" draggable="false"/>
+
+            <img src="image/scale2.png" id="scaleups21p2" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false"/>
+
+            <img src="image/meterpoint.png" id="scalepoint2" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false"/>
+
+            <span class="blink_me" id="barrowhammerups21p2" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonups21p2" style="position:absolute; font-size: 30px; left: 210px; top: 290px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+
+<!-- for point 3 -->
+
+            <img src="image/hammer.png" id="hammerups21p3"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "  draggable="false" onclick="usehammerups41()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_hand21p3"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;"  draggable="false" />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pin21p3"  style="position:absolute; visibility: hidden; left: 237px; top: 300px; transform: rotate(90deg); height: 75px;"  draggable="false" />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_push21p3"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;"  draggable="false" />
+
+            <!-- <img src="image/transbox.png" id="transboxrups21p3"  style="position:absolute; visibility: hidden; left: 340px; top: 250px; height: 130px; width: 40px; border: 1px solid black;" onclick="buttonups41()" /> -->
+
+            <img src="image/scale2.png" id="scaleups21p3" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepoint3" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammerups21p3" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonups21p3" style="position:absolute; font-size: 30px; left: 310px; top: 290px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+
+<!-- for point 4 -->
+
+            <img src="image/hammer.png" id="hammerups21p4"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  " draggable="false" onclick="usehammerups51()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_hand21p4"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pin21p4"  style="position:absolute; visibility: hidden; left: 87px; top: 380px; transform: rotate(90deg); height: 75px;" draggable="false"  />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_push21p4"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/transbox.png" id="transboxrups21p4"  style="position:absolute; visibility: hidden; left: 190px; top: 310px; height: 130px; width: 40px; border: 0px solid black;" draggable="false" onclick="buttonups51()" />
+
+            <img src="image/scale2.png" id="scaleups21p4" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepoint4" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammerups21p4" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonups21p4" style="position:absolute; font-size: 30px; left: 150px; top: 360px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+
+
+<!-- for point 5 -->
+
+            <img src="image/hammer.png" id="hammerups21p5"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  " draggable="false" onclick="usehammerups61()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_hand21p5"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false" />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pin21p5"  style="position:absolute; visibility: hidden; left: 187px; top: 380px; transform: rotate(90deg); height: 75px;" draggable="false" />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_push21p5"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false" />
+
+            <img src="image/transbox.png" id="transboxrups21p5"  style="position:absolute; visibility: hidden; left: 290px; top: 310px; height: 130px; width: 40px; border: 0px solid black;" draggable="false" onclick="buttonups61()" />
+
+            <img src="image/scale2.png" id="scaleups21p5" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepoint5" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammerups21p5" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonups21p5" style="position:absolute; font-size: 30px; left: 250px; top: 350px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+
+
+
+<!-- for point 6 -->
+
+            <img src="image/hammer.png" id="hammerups21p6"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  " draggable="false" onclick="usehammerups71()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_hand21p6"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pin21p6"  style="position:absolute; visibility: hidden; left: 287px; top: 380px; transform: rotate(90deg); height: 75px;" draggable="false"  />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_push21p6"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            
+
+            <img src="image/scale2.png" id="scaleups21p6" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepoint6" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammerups21p6" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonups21p6" style="position:absolute; font-size: 30px; left: 350px; top: 350px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+
+
+            <img src="image/frontpiller.png" id=""  style="position:absolute; visibility: ; left: 10px; top: 162px; height: 396px; width: 60px;" draggable="false"/>
+            <img src="image/frontpiller.png" id=""  style="position:absolute; visibility: ; left: 363px; top: 165px; height: 392px; width: 60px;" draggable="false"/>
+
+
+            <img src="image/transbox.png" id="transboxrups21p6"  style="position:absolute; visibility: hidden; left: 390px; top: 310px; height: 130px; width: 40px; border: 0px solid black;" onclick="buttonups71()" draggable="false" />
+
+            <img src="image/transbox.png" id="transboxrups21p3"  style="position:absolute; visibility: hidden; left: 340px; top: 250px; height: 130px; width: 40px; border: 0px solid black;" onclick="buttonups41()" draggable="false" />
+
+            <!-- <img src="image/hammer.png" id="hammerups22"  style="position:absolute; visibility: hidden; left: 650px; top: 140px; height: 220px; width: 60px; "onclick="usehammerups22()" /> -->
+
+            <img src="image/transbox.png" id="transboxrups22"  style="position:absolute; visibility: hidden; left: 270px; top: 370px; height: 50px; width: 30px; border: 0px solid black; "onclick="buttonups22()" draggable="false" />
+
+            <img src="image/scale.png" id="scaleups22"  style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/zoom.png" id="arrowups22"  style="position:absolute; visibility: hidden; left: 220px; top: 315px; height: 90px; width: 420px;" draggable="false" />
+
+            <img src="image/hammer.png" id="hammerups23"  style="position:absolute; visibility: hidden; left: 650px; top: 140px; height: 220px; width: 60px; " draggable="false" onclick="usehammerups23()" />
+
+            <img src="image/transbox.png" id="transboxrups23"  style="position:absolute; visibility: hidden; left: 370px; top: 370px; height: 50px; width: 30px; border: 0px solid black;" draggable="false" onclick="buttonups23()" />
+
+            <img src="image/scale.png" id="scaleups23"  style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/zoom.png" id="arrowups23"  style="position:absolute; visibility: hidden; left: 325px; top: 315px; height: 90px; width: 320px;" draggable="false" />
+
+            <img src="image/hammer.png" id="hammerups24"  style="position:absolute; visibility: hidden; left: 650px; top: 140px; height: 220px; width: 60px; " draggable="false" onclick="usehammerups24()" />
+
+            <img src="image/transbox.png" id="transboxrups24"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 50px; width: 30px; border: 0px solid black;"  draggable="false" onclick="buttonups24()" />
+
+            <img src="image/scale.png" id="scaleups24"  style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/zoom.png" id="arrowups24"  style="position:absolute; visibility: hidden; left: 200px; top: 395px; height: 90px; width: 440px;" draggable="false" />
+
+            <img src="image/hammer.png" id="hammerups25"  style="position:absolute; visibility: hidden; left: 650px; top: 140px; height: 220px; width: 60px; " draggable="false" onclick="usehammerups25()" />
+
+            <img src="image/transbox.png" id="transboxrups25"  style="position:absolute; visibility: hidden; left: 330px; top: 450px; height: 50px; width: 30px; border: 0px solid black; " draggable="false" onclick="buttonups25()" />
+
+            <img src="image/scale.png" id="scaleups25"  style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/zoom.png" id="arrowups25"  style="position:absolute; visibility: hidden; left: 280px; top: 395px; height: 90px; width: 370px;" draggable="false" />
+
+            <img src="image/hammer.png" id="hammerups26"  style="position:absolute; visibility: hidden; left: 650px; top: 140px; height: 220px; width: 60px; " draggable="false" onclick="usehammerups26()" />
+
+            <img src="image/transbox.png" id="transboxrups26"  style="position:absolute; visibility: hidden; left: 410px; top: 450px; height: 50px; width: 30px; border: 0px solid black; " draggable="false" onclick="buttonups26()" />
+
+            <img src="image/scale.png" id="scaleups26"  style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/zoom.png" id="arrowups26"  style="position:absolute; visibility: hidden; left: 365px; top: 395px; height: 90px; width: 280px;" draggable="false" />
+
+
+            
+
+            <span class="blink_me" id="barrowhammerups22" style="position:absolute; font-size: 30px; left:720px; top:250px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonups22" style="position:absolute; font-size: 30px; left:300px; top:380px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammerups23" style="position:absolute; font-size: 30px; left:720px; top:250px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonups23" style="position:absolute; font-size: 30px; left:400px; top:380px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammerups24" style="position:absolute; font-size: 30px; left:720px; top:250px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonups24" style="position:absolute; font-size: 30px; left:280px; top:460px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammerups25" style="position:absolute; font-size: 30px; left:720px; top:250px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonups25" style="position:absolute; font-size: 30px; left:370px; top:460px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammerups26" style="position:absolute; font-size: 30px; left:720px; top:250px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonups26" style="position:absolute; font-size: 30px; left:450px; top:460px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            
+                       
+             <span class="blink_me" id="barrownextups2" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+            <span id="handarrowups2" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext6()"></i></span>
+        
+</div> 
+
+
+<!-- Horizontal -->
+
+<!-- Step 0 -->
+
+
+        <div class="simsubscreen" id="canvas7" style="visibility: hidden;"></br>
+
+            <!-- <div id="title1"><h4>Horizontal</h4></div> -->
+
+            
+
+            <img src="image/house.png" id="house2"  style="position:absolute; visibility: ; left: 40px; top: 80px; height: 380px; width: 300px; " draggable="false"/>
+
+             
+
+            <img src="image/vertical1.png" id="verticalwall1"  style="position:absolute; left: 350px; top: 0px; height: 470px; width: 450px;" draggable="false"/>
+           
+           <img src="image/curvearrow.png" id="arrowv1"  style="position:absolute; visibility: ; left: 40px; top: 210px; height: 130px; width: 350px; transform: rotate(-15deg);" draggable="false"/>
+
+            <span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Horizontal&nbsp;</center></span>
+
+             <span class="blink_me" id="barrownextvs0" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+            <span id="handarrowvs0" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: ; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext7()"></i></span>
+        
+</div>
+
+
+
+<!-- Step 1 -->
+
+
+        <div class="simsubscreen" id="canvas8" style="visibility: hidden;"></br>
+
+            <!-- <div id="title1"><h4>VERTICAL</h4></div> -->
+
+            
+
+            
+                                   
+            <img src="image/vertical1.png" id="vertical1s1"  style="position:absolute; visibility: ;left: 20px; top: 0px; height: 540px; width: 780px;" draggable="false"/>
+
+            <img src="image/stone.png" id=""  style="position:absolute; visibility: hidden; left: 450px; top: 200px; height: 80px; width: 230px;" draggable="false"/>
+
+            <img src="image/stone.png" id="stonevs1"  style="position:absolute; visibility: hidden; left: 600px; top: 170px; height: 40px; " draggable="false" onclick="usestonevs1()" />
+
+            <img src="image/rough3.png" id="scretch2"  style="position:absolute; display: none; left: 80px; top: 133px; height: 300px; width: 120px;" draggable="false"/>
+
+            <img src="image/stonehand.png" id="stonehandvs1"  style="position:absolute; visibility: hidden; left: 600px; top: 170px; height: 80px; " draggable="false"/>
+
+            <img src="image/marker.png" id="markervs11"  style="position:absolute; visibility: hidden; left: 580px; top: 200px; height: 85px; " draggable="false" onclick="usemarkercond12()" />
+
+            <img src="image/handmarker.png" id="handmarkervs11"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" draggable="false" />
+
+            <img src="image/point.png" id="pointvs11"  style="position:absolute; visibility: hidden; left: 110px; top: 220px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+
+            <img src="image/point.png" id="pointvs12"  style="position:absolute; visibility: hidden; left: 145px; top: 205px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+            
+            <img src="image/point.png" id="pointvs13"  style="position:absolute; visibility: hidden; left: 110px; top: 280px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+
+            <img src="image/point.png" id="pointvs14"  style="position:absolute; visibility: hidden; left: 145px; top: 265px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+            
+            <img src="image/point.png" id="pointvs15"  style="position:absolute; visibility: hidden; left: 110px; top: 340px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+            
+            <img src="image/point.png" id="pointvs16"  style="position:absolute; visibility: hidden; left: 145px; top: 325px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+
+
+
+
+<!--   
+-->
+            
+
+
+            <span class="blink_me" id="barrowstonevs1" style="position:absolute; font-size: 30px; left: 685px; top: 170px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkervs11" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkervs12" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkervs13" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkervs14" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkervs15" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkervs16" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+                       
+             <span class="blink_me" id="barrownextvs1" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+            <span id="handarrowvs1" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext8()"></i></span>
+        
+
+        <span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Horizontal&nbsp;</center></span>
+           <div id="transwhite4x" style="height: 120px; visibility:;">
+
+            <p class="incanvas" id="stepv1a" style="font-size:14px; position: absolute; left: 0px; top: 5px;"><strong>Step 2: a). </strong> Click on Add button to add the Carborundum stone.</p>
+
+            <p class="incanvas" id="stepv1b" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 3: </strong> Click on Carborundum stone and remove any plaster or other coating from the concrete surface.</p>
+
+            <p class="incanvas" id="stepv1bn" style="font-size:14px; position: absolute; left: 0px; top: 40px; visibility: ;"><strong>Note: </strong> For testing, smooth, clean (with abrasive stone) and dry surface should be selected. Rough surfaces resulting from incomplete compaction, loss of grout, spalled or tooled surfaces do not give reliable results and should be avoided. </p>
+
+            <span class="blink_me" id="barrowaddvs11" style="position:absolute; font-size: 30px; font-size: 30px; left: 590px; top: 0px;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <input type="button" id="addbtnvs11" style="position:absolute; left: 630px; top: 8px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 1px; padding-bottom: 3px; color: #FFF;" value="&nbsp;Add&nbsp;" onclick="addstonevs1()" >
+        </div>
+
+            <div id="transwhite5x" style="height: 85px; visibility:hidden;">
+            
+            <p class="incanvas" id="stepv1c" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: </strong> Click on the marker to mark the points (at least six) on the concrete surface.</p>
+            <p class="incanvas" id="stepv1d" style="font-size:14px; position: absolute; left: 0px; top: 40px; visibility: hidden;"><strong>Note: </strong> The point of impact should be at least 25 mm away from any edge or shape discontinuity.</p>
+            
+            </div>
+
+</div>
+
+
+
+<!-- Step 2 -->
+
+
+        <div class="simsubscreen" id="canvas9" style="visibility: hidden;"></br>
+
+            <!-- <div id="title1"><h4>VERTICAL</h4></div> -->
+
+
+            <img src="image/vertical1.png" id=""  style="position:absolute; visibility: ;left: 20px; top: 0px; height: 540px; width: 780px;" draggable="false"/>
+            <img src="image/rough3.png" id=""  style="position:absolute; visibility: ; left: 80px; top: 133px; height: 300px; width: 120px;" draggable="false"/>
+            <img src="image/point.png" id=""  style="position:absolute; visibility: ; left: 110px; top: 220px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+
+            <img src="image/point.png" id=""  style="position:absolute; visibility: ; left: 145px; top: 205px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+            
+            <img src="image/point.png" id=""  style="position:absolute; visibility: ; left: 110px; top: 280px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+
+            <img src="image/point.png" id=""  style="position:absolute; visibility: ; left: 145px; top: 265px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+            
+            <img src="image/point.png" id=""  style="position:absolute; visibility: ; left: 110px; top: 340px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+
+            <img src="image/point.png" id=""  style="position:absolute; visibility: ; left: 145px; top: 325px; height: 20px; width: 20px; transform: rotateY(50deg);" draggable="false" />
+
+
+
+
+
+
+
+
+<!-- 
+            <img src="image/vertical1.png" id="vertical1s1"  style="position:absolute; visibility: ; left: 50px; top: 120px; height: 400px; width: 300px; "/>
+            
+            <img src="image/point.png" id="pointvs11"  style="position:absolute; visibility: ; left: 270px; top: 240px; height: 20px; width: 20px;" />
+            
+            <img src="image/point.png" id="pointvs12"  style="position:absolute; visibility: ; left: 310px; top: 220px; height: 20px; width: 20px;" />
+            
+            <img src="image/point.png" id="pointvs13"  style="position:absolute; visibility: ; left: 270px; top: 330px; height: 20px; width: 20px;" />
+            
+            <img src="image/point.png" id="pointvs14"  style="position:absolute; visibility: ; left: 310px; top: 310px; height: 20px; width: 20px;" />
+            
+            <img src="image/point.png" id="pointvs15"  style="position:absolute; visibility: ; left: 270px; top: 420px; height: 20px; width: 20px;" />            
+
+            <img src="image/point.png" id="pointvs16"  style="position:absolute; visibility: ; left: 310px; top: 400px; height: 20px; width: 20px;" />
+ 
+
+        <img src="image/reboundhammer.png" id="hammervs21"  style="position:absolute; visibility: hidden; left: 370px; top: 200px; height: 140px; width: 410px; "onclick="usehammervs21()" />
+
+            <img src="image/transbox.png" id="transboxrvs21"  style="position:absolute; visibility: hidden; left: 590px; top: 180px; height: 30px; width: 50px; border: 1px solid black; "onclick="buttonvs21()" />
+
+            <img src="image/scale.png" id="scalevs21"  style="position:absolute; visibility: hidden; left: 530px; top: 250px; height: 400px; width: 80px; transform: rotate(-90deg);" />
+
+            <img src="image/zoom2.png" id="arrowvs21"  style="position:absolute; visibility: hidden; left: 450px; top: 260px; height: 140px; width: 170px;" />
+
+            <img src="image/reboundhammer.png" id="hammervs22"  style="position:absolute; visibility: hidden; left: 370px; top: 200px; height: 140px; width: 410px; "onclick="usehammervs22()" />
+
+            <img src="image/transbox.png" id="transboxrvs22"  style="position:absolute; visibility: hidden; left: 590px; top: 160px; height: 30px; width: 50px; border: 1px solid black; "onclick="buttonvs22()" />
+
+            <img src="image/scale.png" id="scalevs22"  style="position:absolute; visibility: hidden; left: 530px; top: 250px; height: 400px; width: 80px; transform: rotate(-90deg);" />
+
+            <img src="image/zoom2.png" id="arrowvs22"  style="position:absolute; visibility: hidden; left: 490px; top: 240px; height: 150px; width: 170px;" />
+
+            <img src="image/reboundhammer.png" id="hammervs23"  style="position:absolute; visibility: hidden; left: 370px; top: 200px; height: 140px; width: 410px; "onclick="usehammervs23()" />
+
+            <img src="image/transbox.png" id="transboxrvs23"  style="position:absolute; visibility: hidden; left: 590px; top: 270px; height: 30px; width: 50px; border: 1px solid black; "onclick="buttonvs23()" />
+
+            <img src="image/scale1.png" id="scalevs23"  style="position:absolute; visibility: hidden; left: 360px; top: 130px; height: 80px; width: 400px; transform: rotate(0deg);" />
+
+            <img src="image/zoom2.png" id="arrowvs23"  style="position:absolute; visibility: hidden; left: 450px; top: 230px; height: 160px; width: 170px; transform: rotate(180deg);" />
+
+            <img src="image/reboundhammer.png" id="hammervs24"  style="position:absolute; visibility: hidden; left: 370px; top: 200px; height: 140px; width: 410px; "onclick="usehammervs24()" />
+
+            <img src="image/transbox.png" id="transboxrvs24"  style="position:absolute; visibility: hidden; left: 590px; top: 250px; height: 30px; width: 50px; border: 1px solid black; "onclick="buttonvs24()" />
+
+            <img src="image/scale1.png" id="scalevs24"  style="position:absolute; visibility: hidden; left: 360px; top: 130px; height: 80px; width: 400px; transform: rotate(0deg);" />
+
+            <img src="image/zoom2.png" id="arrowvs24"  style="position:absolute; visibility: hidden; left: 490px; top: 210px; height: 160px; width: 170px; transform: rotate(180deg);" />
+
+            <img src="image/reboundhammer.png" id="hammervs25"  style="position:absolute; visibility: hidden; left: 370px; top: 200px; height: 140px; width: 410px; "onclick="usehammervs25()" />
+
+            <img src="image/transbox.png" id="transboxrvs25"  style="position:absolute; visibility: hidden; left: 590px; top: 360px; height: 30px; width: 50px; border: 1px solid black; "onclick="buttonvs25()" />
+
+            <img src="image/scale1.png" id="scalevs25"  style="position:absolute; visibility: hidden; left: 360px; top: 230px; height: 80px; width: 400px; transform: rotate(0deg);" />
+
+            <img src="image/zoom2.png" id="arrowvs25"  style="position:absolute; visibility: hidden; left: 450px; top: 320px; height: 160px; width: 170px; transform: rotate(180deg);" />
+
+            <img src="image/reboundhammer.png" id="hammervs26"  style="position:absolute; visibility: hidden; left: 370px; top: 200px; height: 140px; width: 410px; "onclick="usehammervs26()" />
+
+            <img src="image/transbox.png" id="transboxrvs26"  style="position:absolute; visibility: hidden; left: 590px; top: 340px; height: 30px; width: 50px; border: 1px solid black; "onclick="buttonvs26()" />
+-->
+            
+<!-- for point 1 -->
+
+            <img src="image/hammer.png" id="hammervs21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  " draggable="false" onclick="usehammervs21()" />
+            
+            <img src="image/hammerwithhand.png" id="hammer_handvs21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; " draggable="false"  />
+            
+            <img src="image/hammerpushpinonly.png" id="hammer_pinvs21"  style="position:absolute; visibility: hidden; left: 115px; top: 205px; height: 75px;" draggable="false"  />
+            
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushvs21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; " draggable="false"  />
+
+            <img src="image/transbox.png" id="transboxrvs21"  style="position:absolute; visibility: hidden; left: 130px; top: 210px; height: 40px; width: 135px; border: 0px solid black;" draggable="false" onclick="buttonvs21()" />
+
+            <img src="image/scale2.png" id="scalevs21" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointvs1" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammervs21" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs21" style="position:absolute; font-size: 30px; left: 180px; top: 170px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<!-- for point 2 -->
+
+            <img src="image/hammer.png" id="hammervs21p2"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;" draggable="false" onclick="usehammervs31()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_handvs21p2"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pinvs21p2"  style="position:absolute; visibility: hidden; left: 150px; top: 190px; height: 75px;" draggable="false"/>
+
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushvs21p2"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/transbox.png" id="transboxrvs21p2"  style="position:absolute; visibility: hidden; left: 170px; top: 195px; height: 40px; width: 130px; border: 0px solid black;" draggable="false" onclick="buttonvs31()" />
+
+            <img src="image/scale2.png" id="scalevs21p2" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointvs2" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammervs21p2" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs21p2" style="position:absolute; font-size: 30px; left: 210px; top: 150px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+<!-- for point 3 -->
+
+            <img src="image/hammer.png" id="hammervs21p3"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;" draggable="false" onclick="usehammervs41()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_handvs21p3"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pinvs21p3"  style="position:absolute; visibility: hidden; left: 115px; top: 265px; height: 75px;" draggable="false"  />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushvs21p3"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/transbox.png" id="transboxrvs21p3"  style="position:absolute; visibility: hidden; left: 130px; top: 270px; height: 40px; width: 130px;border: 0px solid black;" draggable="false" onclick="buttonvs41()" />
+
+            <img src="image/scale2.png" id="scalevs21p3" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointvs3" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammervs21p3" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs21p3" style="position:absolute; font-size: 30px; left: 190px; top: 230px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+<!-- for point 4 -->
+
+            <img src="image/hammer.png" id="hammervs21p4"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  " draggable="false" onclick="usehammervs51()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_handvs21p4"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pinvs21p4"  style="position:absolute; visibility: hidden; left: 150px; top: 250px; height: 75px;" draggable="false"  />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushvs21p4"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/transbox.png" id="transboxrvs21p4"  style="position:absolute; visibility: hidden; left: 160px; top: 255px; height: 40px; width: 130px; border: 0px solid black;" draggable="false" onclick="buttonvs51()" />
+
+            <img src="image/scale2.png" id="scalevs21p4" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointvs4" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammervs21p4" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs21p4" style="position:absolute; font-size: 30px; left: 230px; top: 210px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+
+<!-- for point 5 -->
+
+            <img src="image/hammer.png" id="hammervs21p5"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  " draggable="false" onclick="usehammervs61()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_handvs21p5"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pinvs21p5"  style="position:absolute; visibility: hidden; left: 115px; top: 325px; height: 75px;" draggable="false"  />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushvs21p5"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/transbox.png" id="transboxrvs21p5"  style="position:absolute; visibility: hidden; left: 130px; top: 330px; height: 40px; width: 130px; border: 0px solid black;" draggable="false" onclick="buttonvs61()" />
+
+            <img src="image/scale2.png" id="scalevs21p5" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointvs5" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammervs21p5" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs21p5" style="position:absolute; font-size: 30px; left: 190px; top: 290px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+
+
+<!-- for point 6 -->
+
+            <img src="image/hammer.png" id="hammervs21p6"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  " draggable="false" onclick="usehammervs71()" />
+
+            <!-- <img src="image/hammer.png" id="hammervs21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammervs21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_handvs21p6"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pinvs21p6"  style="position:absolute; visibility: hidden; left: 150px; top: 310px; height: 75px;" draggable="false"  />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushvs21p6"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            
+
+            <img src="image/scale2.png" id="scalevs21p6" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointvs6" style="position:absolute; visibility: hidden; left: 685px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammervs21p6" style="position:absolute; font-size: 30px; left: 500px; top: 450px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs21p6" style="position:absolute; font-size: 30px; left: 220px; top: 270px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+
+            <!-- <img src="image/transbox.png" id="transboxrvs21p6"  style="position:absolute; visibility: hidden; left: 270px; top: 370px; height: 50px; width: 30px; border: 1px solid red; "onclick="buttonvs71()" /> -->
+
+
+            <img src="image/transbox.png" id="transboxrvs21p6"  style="position:absolute; visibility: hidden; left: 170px; top: 315px; height: 40px; width: 130px; border: 0px solid black;" draggable="false" onclick="buttonvs71()" />
+
+<!--   
+ -->            
+            <span class="blink_me" id="barrowhammervs21" style="position:absolute; font-size: 30px; left:610px; top: 180px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs21" style="position:absolute; font-size: 30px; left:600px; top: 150px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammervs22" style="position:absolute; font-size: 30px; left:610px; top: 180px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs22" style="position:absolute; font-size: 30px; left:600px; top: 130px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammervs23" style="position:absolute; font-size: 30px; left:610px; top: 180px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs23" style="position:absolute; font-size: 30px; left:600px; top: 240px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammervs24" style="position:absolute; font-size: 30px; left:610px; top: 180px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs24" style="position:absolute; font-size: 30px; left:600px; top: 220px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammervs25" style="position:absolute; font-size: 30px; left:610px; top: 180px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs25" style="position:absolute; font-size: 30px; left:600px; top: 330px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammervs26" style="position:absolute; font-size: 30px; left:610px; top: 180px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonvs26" style="position:absolute; font-size: 30px; left:600px; top: 310px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+            <span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Horizontal&nbsp;</center></span>
+            
+    <div id="transwhite" style="height: 50px;" >
+            
+            <p class="incanvas" id="stepv2a" style="font-size:14px; position: absolute; left: 0px; top: 5px;"><strong>Step 5: a).</strong> Click on Add button to add the Rebound Hammer.</p>
+
+            <p class="incanvas" id="stepv2b" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: b).</strong> Click on the Rebound Hammer and press on the first mark point.</p>
+
+            <p class="incanvas" id="stepv2c" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: c).</strong> Click on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepv2d" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: d).</strong> Click again on the Rebound Hammer and press on the second mark point.</p>
+
+            <p class="incanvas" id="stepv2e" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: e).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepv2f" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: f).</strong> Click again on the Rebound Hammer and press on the third mark point.</p>
+
+            <p class="incanvas" id="stepv2g" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: g).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p> 
+
+            <p class="incanvas" id="stepv2h" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: h).</strong> Click again on the Rebound Hammer and press on the fourth mark point.</p> 
+
+            <p class="incanvas" id="stepv2i" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: i).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepv2j" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: j).</strong> Click again on the Rebound Hammer and press on the fifth mark point.</p>
+
+            <p class="incanvas" id="stepv2k" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: k).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepv2l" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: l).</strong> Click again on the Rebound Hammer and press on the last mark point.</p>
+
+            <p class="incanvas" id="stepv2m" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: m).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <span class="blink_me" id="barrowaddvs21" style="position:absolute; font-size: 30px; left:600px; top:0px; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+
+            <input type="button" id="addbtnvs21" style="position:absolute; left:635px; top:8px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; padding-bottom: 2px; color: #FFF;" value="&nbsp;Add&nbsp;" onclick="addhammervs2()" >
+
+            </div>            
+
+                       
+             <span class="blink_me" id="barrownextvs2" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+            <span id="handarrowvs2" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext9()"></i></span>
+        
+</div>
+
+
+<!-- Vertically down -->
+
+<!-- Step 0 -->
+
+
+        <div class="simsubscreen" id="canvas10" style="visibility: hidden;"></br>
+
+            <!-- <div id="title1"><h4>Vertically down</h4></div> -->
+
+            <span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Vertically down&nbsp;</center></span>
+            
+
+            <img src="image/house.png" id="house3"  style="position:absolute; visibility: ; left: 20px; top: 80px; height: 380px; width: 300px; " draggable="false"/>
+
+            <img src="image/down.png" id="downwall1"  style="position:absolute; visibility: ; left: 270px; top: 130px; height: 360px;" draggable="false"/>
+
+            <img src="image/curvearrow.png" id="arrowh1"  style="position:absolute; visibility: ; left: 255px; top: 340px; height: 60px; width: 200px; transform: rotate(5deg);" draggable="false"/>
+            
+            <img src="image/frontpiller2.png" id=""  style="position:absolute; visibility: ; left: 270px; top: 75px; height: 396px; width: 60px;" draggable="false"/>
+            <img src="image/frontpiller2.png" id=""  style="position:absolute; visibility: ; left: 570px; top: 82px; height: 392px; width: 60px;" draggable="false"/>           
+           
+             <span class="blink_me" id="barrownextds0" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+            <span id="handarrowds0" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: ; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext10()"></i></span>
+        
+</div>
+
+
+
+<!-- Step 1 -->
+
+
+        <div class="simsubscreen" id="canvas11" style="visibility: hidden;"></br>
+
+            <span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Vertically down&nbsp;</center></span>
+
+            <div id="transwhite3x" style="height: 120px; visibility:;">
+
+            <p class="incanvas" id="stepd1a" style="font-size:14px; position: absolute; left: 0px; top: 5px;"><strong>Step 2: a). </strong> Click on Add button to add the Carborundum stone.</p>
+
+            <p class="incanvas" id="stepd1b" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 3: </strong> Click on Carborundum stone and remove any plaster or other coating from the concrete surface.</p>
+
+            <p class="incanvas" id="stepd1bn" style="font-size:14px; position: absolute; left: 0px; top: 40px; visibility: ;"><strong>Note: </strong> For testing, smooth, clean (with abrasive stone) and dry surface should be selected. Rough surfaces resulting from incomplete compaction, loss of grout, spalled or tooled surfaces do not give reliable results and should be avoided. </p>
+
+            
+            <input type="button" id="addbtnds11" style="position:absolute; left:635px; top:8px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; padding-bottom: 2px; color: #FFF;" value="&nbsp;Add&nbsp;" onclick="addstoneds1()" >
+        </div>
+            <div id="transwhite4" style="height: 85px; visibility:hidden;">
+            
+            <p class="incanvas" id="stepd1c" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: </strong> Click on the marker to mark the points (at least six) on the concrete surface.</p>
+            <p class="incanvas" id="stepd1d" style="font-size:14px; position: absolute; left: 0px; top: 40px; visibility: hidden;"><strong>Note: </strong> The point of impact should be at least 25 mm away from any edge or shape discontinuity.</p>
+ 
+
+            <span class="blink_me" id="barrowaddds11" style="position:absolute; font-size: 30px; left:600px; top:0px; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            
+            </div>
+           <!-- <strong class="incanvas">Step 1:</strong><br>
+
+           <span class="" id="" style="font-size: large; position: absolute; left: initial;">  <strong class="incanvas"> a).</strong>
+            </span>
+
+            <span class="" id="" style="font-size: large; visibility: hidden; position: absolute; left: initial;">  <strong class="incanvas"> b).</strong>
+            </span>
+ 
+            <span class="" id="stepd1c" style="font-size: large; visibility: hidden; position: absolute; left: initial;">  <strong class="incanvas"> c).</strong>
+            </span>
+-->
+
+<!-- 
+            <span class="blink_me" id="" style="position:absolute; font-size: 30px; left:640px; top:40px; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <input type="button" id="" style="position:absolute; left:680px; top:45px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 1px; padding-bottom: 3px; color: #FFF;" value="&nbsp;Add&nbsp;" onclick="" > -->
+                                   
+            <img src="image/down.png" id="downwall1"  style="position:absolute; visibility: ; left: 10px; top: 120px; height: 400px;" draggable="false"/>
+ 
+
+            <img src="image/stone.png" id="stoneds1"  style="position:absolute; visibility: hidden; left: 630px; top: 300px; height: 40px; " draggable="false" onclick="usestoneds1()" />
+
+            <img src="image/rough2.png" id="scretch3"  style="position:absolute; display: none; left: 65px; top: 320px; height: 160px; width: 440px; transform: skewX(-60deg);" draggable="false"/>
+   
+
+    
+
+
+            <img src="image/stonehand.png" id="stonehandds1"  style="position:absolute; visibility: hidden; left: 630px; top: 300px; height: 80px; " draggable="false"/>
+
+            <img src="image/marker.png" id="markerds11"  style="position:absolute; visibility: hidden; left: 630px; top: 300px; height: 90px;" draggable="false" onclick="usemarkercond13()" />
+
+            <img src="image/handmarker.png" id="handmarkerds11"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" draggable="false" />
+
+            <img src="image/point.png" id="pointds11" style="position:absolute; visibility: hidden; left: 200px; top: 350px; height: 20px; width: 20px;" draggable="false" />
+
+            <img src="image/marker.png" id="markerds12" style="position:absolute; visibility: hidden; left: 560px; top: 180px; height: 140px; width: 90px;" draggable="false" onclick="usemarkerds12()" />
+
+            <img src="image/handmarker.png" id="handmarkerds12"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" draggable="false" />
+
+            <img src="image/point.png" id="pointds12"  style="position:absolute; visibility: hidden; left: 300px; top: 350px; height: 20px; width: 20px;" draggable="false" />
+
+            <img src="image/marker.png" id="markerds13"  style="position:absolute; visibility: hidden; left: 560px; top: 180px; height: 140px; width: 90px;" draggable="false" onclick="usemarkerds13()" />
+
+            <img src="image/handmarker.png" id="handmarkerds13"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" draggable="false" />
+
+            <img src="image/point.png" id="pointds13"  style="position:absolute; visibility: hidden; left: 400px; top: 350px; height: 20px; width: 20px;" draggable="false" />
+
+            <img src="image/marker.png" id="markerds14"  style="position:absolute; visibility: hidden; left: 560px; top: 180px; height: 140px; width: 90px;" draggable="false" onclick="usemarkerds14()" />
+
+            <img src="image/handmarker.png" id="handmarkerds14"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" draggable="false" />
+
+            <img src="image/point.png" id="pointds14"  style="position:absolute; visibility: hidden; left: 150px; top: 410px; height: 20px; width: 20px;" draggable="false" />
+
+            <img src="image/marker.png" id="markerds15"  style="position:absolute; visibility: hidden; left: 560px; top: 180px; height: 140px; width: 90px;" draggable="false" onclick="usemarkerds15()" />
+
+            <img src="image/handmarker.png" id="handmarkerds15"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" draggable="false" />
+
+            <img src="image/point.png" id="pointds15"  style="position:absolute; visibility: hidden; left: 250px; top: 410px; height: 20px; width: 20px;" draggable="false" />
+
+            <img src="image/marker.png" id="markerds16"  style="position:absolute; visibility: hidden; left: 560px; top: 180px; height: 140px; width: 90px;" draggable="false" onclick="usemarkerds16()" />
+
+            <img src="image/handmarker.png" id="handmarkerds16"  style="position:absolute; visibility: hidden; left: 560px; top: 220px; height: 90px; width: 130px;" draggable="false" />
+
+            <img src="image/point.png" id="pointds16"  style="position:absolute; visibility: hidden; left: 350px; top: 410px; height: 20px; width: 20px;" draggable="false" />            
+            
+
+            <span class="blink_me" id="barrowstoneds1" style="position:absolute; font-size: 30px; left: 720px; top: 295px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkerds11" style="position:absolute; font-size: 30px;left: 690px; top: 310px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkerds12" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkerds13" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkerds14" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkerds15" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+            <span class="blink_me" id="barrowmarkerds16" style="position:absolute; font-size: 30px; left:640px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+                       
+             <span class="blink_me" id="barrownextds1" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+            
+            <img src="image/frontpiller2.png" id=""  style="position:absolute; visibility: ; left: 10px; top: 103px; height: 396px; width: 60px;" draggable="false"/>
+            <img src="image/frontpiller2.png" id=""  style="position:absolute; visibility: ; left: 347px; top: 110px; height: 392px; width: 60px;" draggable="false"/>
+
+            <span id="handarrowds1" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext11()"></i></span>
+        
+</div>
+
+
+<!-- Step 2 -->
+
+
+        <div class="simsubscreen" id="canvas12" style="visibility: hidden;"></br>
+
+            <span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Vertically down&nbsp;</center></span>
+
+            <div id="transwhite"  style="height: 50px;">
+
+            <p class="incanvas" id="stepd2a" style="font-size:14px; position: absolute; left: 0px; top: 5px;"><strong>Step 5: a).</strong> Click on Add button to add the Rebound Hammer.</p>
+
+            <p class="incanvas" id="stepd2b" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: b).</strong> Click on the Rebound Hammer and press on the first mark point.</p>
+
+            <p class="incanvas" id="stepd2c" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: c).</strong> Click on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepd2d" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: d).</strong> Click again on the Rebound Hammer and press on the second mark point.</p>
+
+            <p class="incanvas" id="stepd2e" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: e).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepd2f" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: f).</strong> Click again on the Rebound Hammer and press on the third mark point.</p>
+
+            <p class="incanvas" id="stepd2g" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: g).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepd2h" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 5: h).</strong> Click again on the Rebound Hammer and press on the fourth mark point.</p>
+
+            <p class="incanvas" id="stepd2i" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: i).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepd2j" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: j).</strong> Click again on the Rebound Hammer and press on the fifth mark point.</p>
+
+            <p class="incanvas" id="stepd2k" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: k).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+            <p class="incanvas" id="stepd2l" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: l).</strong> Click again on the Rebound Hammer and press on the last mark point.</p>
+
+            <p class="incanvas" id="stepd2m" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 4: m).</strong> Click again on Button to release the Hammer and Observe Rebound index from Graduated Scale.</p>
+
+ 
+            </div>
+
+            <span class="blink_me" id="barrowaddds21" style="position:absolute; font-size: 30px; left:640px; top:40px; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <input type="button" id="addbtnds21" style="position:absolute; left:680px; top:45px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 1px; padding-bottom: 3px; color: #FFF;" value="&nbsp;Add&nbsp;" onclick="addhammerds2()" >
+            
+            <img src="image/down.png" id="downwall1" style="position:absolute; visibility: ; left: 10px; top: 120px; height: 400px;" draggable="false">
+            
+            <img src="image/rough2.png" id=""  style="position:absolute; visibility: ; left: 65px; top: 320px; height: 160px; width: 440px; transform: skewX(-60deg);" draggable="false"/>
+
+            <img src="image/point.png" id="pointds11" style="position:absolute;visibility: ;left: 200px;top: 350px;height: 20px;width: 20px;" draggable="false">
+            
+            <img src="image/point.png" id="pointds12" style="position:absolute;visibility: ;left: 300px;top: 350px;height: 20px;width: 20px;" draggable="false">            
+
+            <img src="image/point.png" id="pointds13" style="position:absolute;visibility: ;left: 400px;top: 350px;height: 20px;width: 20px;" draggable="false">
+            
+            <img src="image/point.png" id="pointds14" style="position:absolute;visibility: ;left: 150px;top: 410px;height: 20px;width: 20px;" draggable="false">
+            
+            <img src="image/point.png" id="pointds15" style="position:absolute;visibility: ;left: 250px;top: 410px;height: 20px;width: 20px;" draggable="false">
+            
+            <img src="image/point.png" id="pointds16" style="position:absolute;visibility: ;left: 350px;top: 410px;height: 20px;width: 20px;" draggable="false">                     
+            <!-- <img src="image/down.png" id="downwall1"  style="position:absolute; visibility: ; left: 10px; top: 120px; height: 400px;"/>
+            
+            <img src="image/point.png" id="pointds11"  style="position:absolute; visibility: ; left: 170px; top: 380px; height: 20px; width: 20px;" />
+            
+            <img src="image/point.png" id="pointds12"  style="position:absolute; visibility: ; left: 270px; top: 380px; height: 20px; width: 20px;" />            
+
+            <img src="image/point.png" id="pointds13"  style="position:absolute; visibility: ; left: 370px; top: 380px; height: 20px; width: 20px;" />
+            
+            <img src="image/point.png" id="pointds14"  style="position:absolute; visibility: ; left: 110px; top: 440px; height: 20px; width: 20px;" />
+            
+            <img src="image/point.png" id="pointds15"  style="position:absolute; visibility: ; left: 210px; top: 440px; height: 20px; width: 20px;" />
+            
+            <img src="image/point.png" id="pointds16"  style="position:absolute; visibility: ; left: 310px; top: 440px; height: 20px; width: 20px;" /> -->
+
+            
+<!-- for point 1 -->
+
+            <img src="image/hammer.png" id="hammerds21"  style="position:absolute; visibility: hidden; left: 450px; top: 450px; height: 45px;  " draggable="false" onclick="usehammerds21()" />
+            
+            <img src="image/hammerwithhand.png" id="hammer_handds21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; " draggable="false"  />
+            
+            <img src="image/hammerpushpinonly.png" id="hammer_pinds21"  style="position:absolute; visibility: hidden; left: 110px; top: 217px; transform: rotate(-90deg); height: 75px;" draggable="false"  />
+            
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushds21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; " draggable="false"  />
+
+            <img src="image/transbox.png" id="transboxrds21"  style="position:absolute; visibility: hidden; left: 190px; top: 220px; height: 130px; width: 40px; border: 0px solid black;" draggable="false" onclick="buttonds21()" />
+
+            <img src="image/scale2.png" id="scaleds21" style="position:absolute; visibility: hidden; left: 690px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointds1" style="position:absolute; visibility: hidden; left: 725px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammerds21" style="position:absolute; font-size: 30px; left: 570px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonds21" style="position:absolute; font-size: 30px; left: 150px; top: 270px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+<!-- for point 2 -->
+
+            <img src="image/hammer.png" id="hammerds22"  style="position:absolute; visibility: hidden; left: 450px; top: 450px; height: 45px;" draggable="false" onclick="usehammerds31()" />
+
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_handds21p2"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pinds21p2"  style="position:absolute; visibility: hidden; left: 210px; top: 217px; transform: rotate(-90deg); height: 75px;" draggable="false"/>
+
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushds21p2"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/transbox.png" id="transboxrds22"  style="position:absolute; visibility: hidden; left: 290px; top: 220px; height: 130px; width: 40px; border: 0px solid black;" draggable="false" onclick="buttonds31()" />
+
+            <img src="image/scale2.png" id="scaleds21p2" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointds2" style="position:absolute; visibility: hidden; left: 725px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammerds21p2" style="position:absolute; font-size: 30px; left: 570px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonds21p2" style="position:absolute; font-size: 30px; left: 240px; top: 270px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+
+<!-- for point 3 -->
+
+            <img src="image/hammer.png" id="hammerds23"  style="position:absolute; visibility: hidden; left: 450px; top: 450px; height: 45px;" draggable="false" onclick="usehammerds41()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_handds21p3"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pinds21p3"  style="position:absolute; visibility: hidden; left: 310px; top: 217px; transform: rotate(-90deg); height: 75px;" draggable="false"  />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushds21p3"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <!-- <img src="image/transbox.png" id="transboxrds23"  style="position:absolute; visibility: hidden; left: 390px; top: 220px; height: 130px; width: 40px; border: 1px solid black;" onclick="buttonds41()" /> -->
+
+            <img src="image/scale2.png" id="scaleds21p3" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointds3" style="position:absolute; visibility: hidden; left: 725px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammerds21p3" style="position:absolute; font-size: 30px; left: 570px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <!-- <span class="blink_me" id="barrowbuttonds21p3" style="position:absolute; font-size: 30px; left: 350px; top: 270px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span> -->
+
+
+<!-- for point 4 -->
+
+            <img src="image/hammer.png" id="hammerds24"  style="position:absolute; visibility: hidden; left: 450px; top: 450px; height: 45px;  " draggable="false" onclick="usehammerds51()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_handds21p4"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pinds21p4"  style="position:absolute; visibility: hidden; left: 61px; top: 278px; transform: rotate(-90deg); height: 75px;" draggable="false"  />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushds21p4"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/transbox.png" id="transboxrds24"  style="position:absolute; visibility: hidden; left: 140px; top: 280px; height: 130px; width: 40px; border: 0px solid black;" draggable="false" onclick="buttonds51()" />
+
+            <img src="image/scale2.png" id="scaleds21p4" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointds4" style="position:absolute; visibility: hidden; left: 725px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammerds21p4" style="position:absolute; font-size: 30px; left: 570px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonds21p4" style="position:absolute; font-size: 30px; left: 100px; top: 330px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+
+
+<!-- for point 5 -->
+
+            <img src="image/hammer.png" id="hammerds25"  style="position:absolute; visibility: hidden; left: 450px; top: 450px; height: 45px;  " draggable="false" onclick="usehammerds61()" />
+
+            <!-- <img src="image/hammer.png" id="hammerups21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammerups21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_handds21p5"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pinds21p5"  style="position:absolute; visibility: hidden; left: 161px; top: 278px; transform: rotate(-90deg); height: 75px;" draggable="false"  />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushds21p5"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/transbox.png" id="transboxrds25"  style="position:absolute; visibility: hidden; left: 240px; top: 280px; height: 130px; width: 40px; border: 0px solid black;" draggable="false" onclick="buttonds61()" />
+
+            <img src="image/scale2.png" id="scaleds21p5" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointds5" style="position:absolute; visibility: hidden; left: 725px; top: 155px; height: 15px;" draggable="false" />
+
+            <span class="blink_me" id="barrowhammerds21p5" style="position:absolute; font-size: 30px; left: 570px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonds21p5" style="position:absolute; font-size: 30px; left: 200px; top: 330px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+
+
+
+<!-- for point 6 -->
+
+            <img src="image/hammer.png" id="hammerds26"  style="position:absolute; visibility: hidden; left: 450px; top: 450px; height: 45px;  " draggable="false" onclick="usehammerds71()" />
+
+            <!-- <img src="image/hammer.png" id="hammervs21"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 45px;  "onclick="usehammervs21()" /> -->
+            
+            <img src="image/hammerwithhand.png" id="hammer_handds21p6"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            <img src="image/hammerpushpinonly.png" id="hammer_pinds21p6"  style="position:absolute; visibility: hidden; left: 261px; top: 278px; transform: rotate(-90deg); height: 75px;" draggable="false"  />
+  
+            <img src="image/hammerpushwithhand.png" id="hammer_hand_pushds21p6"  style="position:absolute; visibility: hidden; left: 250px; top: 450px; height: 75px; visibility: hidden;" draggable="false"  />
+
+            
+
+            <img src="image/scale2.png" id="scaleds21p6" style="position:absolute; visibility: hidden; left: 650px; top: 135px; height: 400px; width: 80px;" draggable="false" />
+
+            <img src="image/meterpoint.png" id="scalepointds6" style="position:absolute; visibility: hidden; left: 725px; top: 155px; height: 15px;" draggable="false" />
+
+
+
+            <!-- <img src="image/transbox.png" id="transboxrds26"  style="position:absolute; visibility: hidden; left: 340px; top: 280px; height: 130px; width: 40px; border: 1px solid black;" onclick="buttonds71()" /> -->
+
+
+            <span class="blink_me" id="barrowhammerds21p6" style="position:absolute; font-size: 30px; left: 570px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonds26" style="position:absolute; font-size: 30px; left: 300px; top: 330px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+<!-- =========================== -->
+    
+
+
+<!-- 
+            <span class="blink_me" id="barrowhammerds21" style="position:absolute; font-size: 30px; left: 590px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonds21" style="position:absolute; font-size: 30px; left:120px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+ -->
+            <span class="blink_me" id="barrowhammerds22" style="position:absolute; font-size: 30px; left: 590px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonds22" style="position:absolute; font-size: 30px; left:220px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammerds23" style="position:absolute; font-size: 30px; left: 590px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonds23" style="position:absolute; font-size: 30px; left:320px; top:220px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammerds24" style="position:absolute; font-size: 30px; left: 590px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonds24" style="position:absolute; font-size: 30px; left:60px; top:280px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammerds25" style="position:absolute; font-size: 30px; left: 590px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonds25" style="position:absolute; font-size: 30px; left:160px; top:280px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <span class="blink_me" id="barrowhammerds26" style="position:absolute; font-size: 30px; left: 590px; top: 410px; visibility: hidden;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <span class="blink_me" id="barrowbuttonds26" style="position:absolute; font-size: 30px; left:260px; top:280px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+            
+            <img src="image/frontpiller2.png" id=""  style="position:absolute; visibility: ; left: 10px; top: 105px; height: 396px; width: 60px;" draggable="false"/>
+            <img src="image/frontpiller2.png" id=""  style="position:absolute; visibility: ; left: 347px; top: 107px; height: 392px; width: 60px;" draggable="false"/>
+            
+                       
+             <span class="blink_me" id="barrownextds2" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+            <span id="handarrowds2" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext12()"></i></span>
+
+
+            <img src="image/transbox.png" id="transboxrds23"  style="position:absolute; visibility: hidden; left: 390px; top: 220px; height: 130px; width: 40px; border: 0px solid black;" draggable="false" onclick="buttonds41()" />
+
+            <span class="blink_me" id="barrowbuttonds21p3" style="position:absolute; font-size: 30px; left: 350px; top: 270px; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <img src="image/transbox.png" id="transboxrds26"  style="position:absolute; visibility: hidden; left: 340px; top: 280px; height: 130px; width: 40px; border: 0px solid black;" draggable="false" onclick="buttonds71()" />
+        
+</div>
+
+
+
+<!-- Step 3 -->
+
+
+        <div class="simsubscreen" id="canvas13" style="visibility: hidden;">
+
+<span style="position: absolute; left: 585px; top: 15px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 180px;"><center>&nbsp;Observations&nbsp;</center></span>
+
+<strong style="position: absolute; left: 250px; top: 5px; color: #083685;">Index for Mark 1 = <span id="can13mp1"></span></strong>
+<img src="image/scale3.png" draggable="false" style="position:absolute; left: 50px; top: 25px; height: 60px; width: 500px;" />
+<img src="image/meterpoint2.png" draggable="false" id="can13scalepoint1" style="position:absolute; visibility:  ; left: 80px; top: 45px; height: 20px;" />
+
+<strong style="position: absolute; left: 250px; top: 95px; color: #083685;">Index for Mark 2 = <span id="can13mp2"></span></strong>
+<img src="image/scale3.png" draggable="false" style="position:absolute; left: 50px; top: 115px; height: 60px; width: 500px;" />
+<img src="image/meterpoint2.png" draggable="false" id="can13scalepoint2" style="position:absolute; visibility:  ; left: 80px; top: 135px; height: 20px;" />
+
+<strong style="position: absolute; left: 250px; top: 185px; color: #083685;">Index for Mark 3 = <span id="can13mp3"></span></strong>
+<img src="image/scale3.png" style="position:absolute; left: 50px; top: 205px; height: 60px; width: 500px;" draggable="false" />
+<img src="image/meterpoint2.png" id="can13scalepoint3" style="position:absolute; visibility:  ; left: 80px; top: 225px; height: 20px;" draggable="false" />
+
+<strong style="position: absolute; left: 250px; top: 275px; color: #083685;">Index for Mark 4 = <span id="can13mp4"></span></strong>
+<img src="image/scale3.png" style="position:absolute; left: 50px; top: 295px; height: 60px; width: 500px;"  draggable="false"/>
+<img src="image/meterpoint2.png" id="can13scalepoint4" style="position:absolute; visibility:  ; left: 425px; top: 315px; height: 20px;" draggable="false" />
+
+<strong style="position: absolute; left: 250px; top: 365px; color: #083685;">Index for Mark 5 = <span id="can13mp5"></span></strong>
+<img src="image/scale3.png" style="position:absolute; left: 50px; top: 385px; height: 60px; width: 500px;" draggable="false" />
+<img src="image/meterpoint2.png" id="can13scalepoint5" style="position:absolute; visibility:  ; left: 410px; top: 405px; height: 20px;" draggable="false" />
+
+<strong style="position: absolute; left: 250px; top: 455px; color: #083685;">Index for Mark 6 = <span id="can13mp6"></span></strong>
+<img src="image/scale3.png" style="position:absolute; left: 50px; top: 475px; height: 60px; width: 500px;" draggable="false" />
+<img src="image/meterpoint2.png" id="can13scalepoint6" style="position:absolute; visibility:  ; left: 410px; top: 495px; height: 20px;" draggable="false" />
+
+<strong style="position: absolute; left: 600px; top: 60px; color: #000;">Step 6: a).</strong>
+
+<strong style="position: absolute; left: 600px; top: 90px; color: #083685;">Enter the Observations</strong>
+
+<input type="number" id="ind1" size="8" placeholder="Mark 1" style="position: absolute; left: 600px; top: 140px;  font-size: 20px; height: 30px; width: 140px; border: ;">
+
+<input type="number" id="ind2" size="8" placeholder="Mark 2" style="position: absolute; left: 600px; top: 190px; font-size: 20px; height: 30px; width: 140px; border: ;">
+
+<input type="number" id="ind3" size="8" placeholder="Mark 3" style="position: absolute; left: 600px; top: 240px; font-size: 20px; height: 30px; width: 140px; border: ;"> 
+
+<input type="number" id="ind4" size="8" placeholder="Mark 4" style="position: absolute; left: 600px; top: 290px; font-size: 20px; height: 30px; width: 140px; border: ;">
+
+<input type="number" id="ind5" size="8" placeholder="Mark 5" style="position: absolute; left: 600px; top: 340px; font-size: 20px; height: 30px; width: 140px; border: ;">
+
+<input type="number" id="ind6" size="8" placeholder="Mark 6" style="position: absolute; left: 600px; top: 390px; font-size: 20px; height: 30px; width: 140px; border: ;">  
+
+<input type="button" class="btn btn-info" id="" style="position: absolute; left: 630px; top: 450px;" value="Submit" onclick="">
+
+<input type="button" class="btn btn-info" id="isbtn1" style="position: absolute; left: 630px; top: 450px; visibility: hidden;" value="Submit" onclick="indexsample1()">
+<input type="button" class="btn btn-info" id="isbtn2" style="position: absolute; left: 630px; top: 450px; visibility: hidden;" value="Submit" onclick="indexsample2()">
+<input type="button" class="btn btn-info" id="isbtn3" style="position: absolute; left: 630px; top: 450px; visibility: hidden;" value="Submit" onclick="indexsample3()">
+<!-- <input type="button" class="btn btn-info" id="isbtn3" style="position: absolute; left: 630px; top: 370px; visibility: ;" value="Submit" onclick="indexsample()"> -->
+             <span class="blink_me" id="arrownavNext13" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+            <span id="navNext13" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext14()"></i></span>
+        
+</div>
+<!----- 
+    <div class="simsubscreen" id="canvas14" style="visibility: hidden;">
+
+<span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Observations&nbsp;</center></span>
+<table style="width: 350px; position: absolute; left: 35px; top: 50px; text-align: center; border: 1px solid #000;">
+                 
+                <tbody>
+                <tr style="text-align: justify-all; background-color: #000; color: #FFF;">
+                    <td style="padding: 10px; border-left-color: #FFF;"><strong>S. No.</strong></td>
+                    <td style="border: 1px solid #000; width: 300px; padding: 10px; border-left-color: #FFF;  border-right-color: #FFF;"><strong>Rebound Index</strong></td>
+                    <td style="border: 1px solid #000; width: 300px; padding: 10px; ">Compressive strength (MPa)</td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: center;"><strong>1</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri1">N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: center;"><strong>2</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri2">N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: center;"><strong>3</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri3">N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: center;"><strong>4</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri4">N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: center;"><strong>5</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri5">N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: center;"><strong>6</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri6">N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table style="width: 350px; position: absolute; left: 35px; top: 420px; text-align: center; border: 1px solid #000;">
+                 
+                <tbody>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left; width: 210px;"><strong>Impact energy</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ie1">N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>Face orientation of specimen</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="fo1">N/A</strong></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+<span style="position: absolute; left: 410px; top: 60px; font-weight: bold;">Calculate Compressive strength from the following graph:</span>
+
+<div style="position: absolute; left: 390px; top: 110px; background-color: #FFF; border: 2px solid #FFF; height: 260px; width: 400px; background-color: #FFF;">
+            <div class="ct-chart" style=""></div>
+           <!-- <div id="line_top_x"></div> ---------
+
+</div> 
+  <input class="btn btn-info" id="submit121" type="button" value="Show Graph" style="position: absolute; left: 535px; top: 380px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="showegraph1()" />
+    
+
+<span class="blink_me" id="arrownavNext14" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+<span id="navNext14" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext14()"></i></span>
+
+   </div>
+------->
+
+ 
+    <div class="simsubscreen" id="canvas15" style="visibility: hidden;">
+
+      <div id="transwhite"  style="height: 50px; position: absolute; top: 10px;">
+
+            <p class="incanvas" id="stepd15a" style="font-size:14px; position: absolute; left: 0px; top: 5px;"><strong>Step 6: b).</strong> Remove the outlier and calculate the average Rebound index.</p>
+
+            <p class="incanvas" id="stepd15b" style="font-size:14px; position: absolute; left: 0px; top: 5px; visibility: hidden;"><strong>Step 6: c).</strong> Find out the compressive strength using the calibration chart.</p>
+
+      </div>
+<!-- <span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Observations&nbsp;</center></span> -->
+
+<table style="width: 250px; position: absolute; left: 35px; top: 67px; text-align: center; border: 1px solid #000;">
+                <!--- --->
+                <tbody>
+                <tr style="text-align: justify-all; background-color: #000; color: #FFF;">
+                    <td style="padding: 10px; border-left-color: #FFF;"><strong>S. No.</strong></td>
+                    <td style="border: 1px solid #000; width: 300px; padding: 10px; border-left-color: #FFF;  "><strong>Rebound Index</strong></td>
+                    <!-- <td style="border: 1px solid #000; width: 300px; padding: 10px; ">Compressive strength (MPa)</td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>1</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri11">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>2</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri22">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>3</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri33">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>4</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri44">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>5</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri55">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>6</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri66">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>Average</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="avgrem"></strong></td>
+                </tr>
+                </tbody>
+            </table>
+
+<input class="btn btn-info" id="remsub1" type="button" value="Remove" style="position: absolute; left: 290px; top: 115px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="rem1()" />
+<input class="btn btn-info" id="remsub2" type="button" value="Remove" style="position: absolute; left: 290px; top: 155px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="rem2()" />
+<input class="btn btn-info" id="remsub3" type="button" value="Remove" style="position: absolute; left: 290px; top: 195px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="rem3()" />
+<input class="btn btn-info" id="remsub4" type="button" value="Remove" style="position: absolute; left: 290px; top: 235px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="rem4()" />
+<input class="btn btn-info" id="remsub5" type="button" value="Remove" style="position: absolute; left: 290px; top: 275px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="rem5()" />
+<input class="btn btn-info" id="remsub6" type="button" value="Remove" style="position: absolute; left: 290px; top: 315px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="rem6()" />
+
+<img src="image/t3.png" style="position: absolute; left: 380px; top: 70px; height: 330px;">
+<!-- <span style="position: absolute; left: 500px; top: 120px; font-weight: bold;">HINT 1: If a reading has a difference of 6 or more units from average in compressive strength
+</span>
+<span style="position: absolute; left: 500px; top: 220px; font-weight: bold;">HINT 2: If two or more outliers, repeat the test, otherwise generate results
+</span> -->
+
+<!-- <input class="btn btn-info" id="submit121" type="button" value="Repeat the test" style="position: absolute; left: 470px; top: 445px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="" /> -->
+
+<input class="btn btn-info" id="submitrep1" type="button" value="Generate Report" style="position: absolute; left: 620px; top: 445px; padding-top: 5px; padding-bottom: 5px; visibility: hidden;" onclick="showresultbtn();" />
+
+
+            <table style="width: 350px; position: absolute; left: 35px; top: 420px; text-align: center; border: 1px solid #000;">
+                <!--- --->
+                <tbody>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left; width: 210px;"><strong>Impact energy</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ie2">N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>Face orientation of specimen</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="fo2">N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>Compressive Strength</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="fo3">N/A</strong></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+<!-- <span style="position: absolute; left: 410px; top: 60px; font-weight: bold;">Calculate Compressive strength from the following graph:</span> -->
+
+<!-- <div style="position: absolute; left: 390px; top: 110px; background-color: #FFF; border: 2px solid #FFF; height: 260px; width: 400px; background-color: #FFF;"> -->
+            <!-- <div class="ct-chart" style=""></div> -->
+           <!-- <div id="line_top_x"></div> -->
+
+<!-- </div>  -->
+  <!-- <input class="btn btn-info" id="submit121" type="button" value="Show Graph" style="position: absolute; left: 535px; top: 380px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="showegraph1()" /> -->
+
+<span class="blink_me" id="arrownavNext15" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+<span id="navNext15" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext15()"></i></span>
+
+    </div>
+
+
+ 
+    <div class="simsubscreen" id="canvas16" style="visibility: hidden;">
+
+<span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Report&nbsp;</center></span>
+
+<!---
+<table style="width: 550px; position: absolute; left: 35px; top: 230px; text-align: center; border: 1px solid #000;">
+                 
+                <tbody>
+                <tr style="text-align: justify-all; background-color: #000; color: #FFF;">
+                    <td style="padding: 10px; border-left-color: #FFF;"><strong>S. No.</strong></td>
+                    <td style="border: 1px solid #000; width: 300px; padding: 10px; border-left-color: #FFF;  border-right-color: #FFF;"><strong>Rebound Index</strong></td>
+                    <td style="border: 1px solid #000; width: 300px; padding: 10px; ">Compressive strength (MPa)</td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>1</strong></td>
+                    <td style="border: 1px solid #000;"><strong>N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>2</strong></td>
+                    <td style="border: 1px solid #000;"><strong>N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>3</strong></td>
+                    <td style="border: 1px solid #000;"><strong>N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>4</strong></td>
+                    <td style="border: 1px solid #000;"><strong>N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>5</strong></td>
+                    <td style="border: 1px solid #000;"><strong>N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>6</strong></td>
+                    <td style="border: 1px solid #000;"><strong>N/A</strong></td>
+                    <td><strong>N/A</strong></td>
+                </tr>
+                </tbody>
+            </table>
+
+ 
+ 
+<span style="position: absolute; left: 600px; top: 270px; font-weight: bold;"><strong>Results: </strong><br>Average compressive strength<br> <br>= 
+</span>
+<input type="text" name="" style="position: absolute; left: 620px; top: 325px; width: 120px;">
+--->
+
+<!-- <input class="btn btn-info" id="submit121" type="button" value="Generate Report" style="position: absolute; left: 620px; top: 445px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="showreportbtn()" /> -->
+
+
+            <table style="width: 550px; position: absolute; left: 125px; top: 130px; text-align: center; border: 1px solid #000;">
+                <!--- --->
+                <tbody>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left; width: 210px;"><strong>Impact energy</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="rie1">N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>Face orientation of specimen</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="rfo1">N/A</strong></td>
+                </tr>
+                <!----> <tr style="border: 1px solid #000;"> 
+                    <td style="padding: 10px; text-align: left;"><strong>Average rebound number</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="repavg">N/A</strong></td>
+                </tr>
+                 
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>Compressive Strength</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="csrep">N/A</strong></td>
+                </tr>
+                </tbody>
+            </table>
+
+<input class="btn btn-info" id="submit121" type="button" value="Restart" style="position: absolute; left: 680px; top: 515px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="reset()" />
+<!-- <span style="position: absolute; left: 410px; top: 60px; font-weight: bold;">Calculate Compressive strength from the following graph:</span> -->
+
+<!-- <div style="position: absolute; left: 390px; top: 110px; background-color: #FFF; border: 2px solid #FFF; height: 260px; width: 400px; background-color: #FFF;"> -->
+            <!-- <div class="ct-chart" style=""></div> -->
+           <!-- <div id="line_top_x"></div> -->
+
+<!-- </div>  -->
+  <!-- <input class="btn btn-info" id="submit121" type="button" value="Show Graph" style="position: absolute; left: 535px; top: 380px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="showegraph1()" /> -->
+
+<span class="blink_me" id="arrownavNext16" style="position:absolute; font-size: 30px; left:670px; top:490px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>        
+
+<span id="navNext16" style="position:absolute; left:720px; top:485px; height: 50px; width: 50px; visibility: hidden; cursor: pointer; font-size: 35px;" ><i class="fa fa-hand-o-right" onclick="navNext16()"></i></span>
+
+    </div>
+
+
+
+ 
+    <div class="simsubscreen" id="canvas17" style="visibility: hidden;">
+
+<span style="position: absolute; left: 275px; top: 5px; background-color: #2150a0; color: #FFF; font-size: 1.5em; border-radius: 5px; width: 250px;"><center>&nbsp;Report&nbsp;</center></span>
+
+
+<table style="width: 600px; position: absolute; left: 35px; top: 230px; text-align: center; border: 1px solid #000;">
+                <!--- --->
+                <tbody>
+                <tr style="text-align: justify-all; background-color: #000; color: #FFF;">
+                    <td style="padding: 10px; border-left-color: #FFF; width: 100px;"><strong>S. No.</strong></td>
+                    <td style="border: 1px solid #000; width: 300px; padding: 10px; border-left-color: #FFF; "><strong>Rebound Index</strong></td>
+                    <!-- <td style="border: 1px solid #000; width: 300px; padding: 10px; ">Compressive strength (MPa)</td> -->
+                </tr>
+
+
+
+
+
+
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 6px; text-align: center;"><strong>1</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri1">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 6px; text-align: center;"><strong>2</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri2">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 6px; text-align: center;"><strong>3</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri3">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 6px; text-align: center;"><strong>4</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri4">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 6px; text-align: center;"><strong>5</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri5">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 6px; text-align: center;"><strong>6</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ri6">N/A</strong></td>
+                    <!-- <td><strong>N/A</strong></td> -->
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 6px; text-align: center;"><strong>Average</strong></td>
+                    <td style="border: 1px solid #000;"><strong>N/A</strong></td>
+                    <!-- <td><strong> </strong></td> -->
+                </tr>
+            </tbody>
+            </table>
+
+ 
+ 
+
+
+
+
+
+            <table style="width: 600px; position: absolute; left: 35px; top: 90px; text-align: center; border: 1px solid #000;">
+                <!--- --->
+                <tbody>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left; width: 260px;"><strong>Impact energy</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="ie1">N/A</strong><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>Face orientation of specimen</strong></td>
+                    <td style="border: 1px solid #000;"><strong id="fo1">N/A</strong><strong>N/A</strong></td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>Average rebound number</strong></td>
+                    <td style="border: 1px solid #000;"><strong>N/A</strong></td>
+                </tr>
+                <!-- <tr style="border: 1px solid #000;">
+                    <td style="padding: 10px; text-align: left;"><strong>Compressive strength</strong></td>
+                    <td style="border: 1px solid #000;"><strong>N/A</strong></td>
+                </tr> -->
+                </tbody>
+            </table>
+
+
+<!-- <span style="position: absolute; left: 410px; top: 60px; font-weight: bold;">Calculate Compressive strength from the following graph:</span> -->
+
+<!-- <div style="position: absolute; left: 390px; top: 110px; background-color: #FFF; border: 2px solid #FFF; height: 260px; width: 400px; background-color: #FFF;"> -->
+            <!-- <div class="ct-chart" style=""></div> -->
+           <!-- <div id="line_top_x"></div> -->
+
+<!-- </div>  -->
+  <!-- <input class="btn btn-info" id="submit121" type="button" value="Show Graph" style="position: absolute; left: 535px; top: 380px; padding-top: 5px; padding-bottom: 5px; visibility: ;" onclick="showegraph1()" /> -->
+    </div>
+
+
+
+
+</div><!--- First Div---->
+
+
+</td></tr>
+</table>
+
+<script src="../assets/js/iframeResize.js"></script></body>
+</html>
