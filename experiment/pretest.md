@@ -34,7 +34,7 @@ C    15 mm<br>
 
 D    20 mm<br><br>
 
-Q4. what is the minimum number of readings should be taken on each face of sample in the experiment as per IS:516?<br>
+Q4. What is the minimum number of readings should be taken on each face of sample in the experiment as per IS:516?<br>
 
 **A    6**<br>
 
@@ -44,7 +44,7 @@ C    8<br>
 
 D    7<br><br>
 
-Q5. rebound index doesn't depend on which of the following?<br>
+Q5. Rebound index doesn't depend on which of the following?<br>
 
 A    Type of aggregate<br>
 
