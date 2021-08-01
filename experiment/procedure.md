@@ -1,17 +1,14 @@
 ### These steps will be followed for the experiment
 1.  For testing, smooth, clean (with abrasive stone) and dry surface should be selected. Rough surfaces resulting from incomplete compaction, loss of grout, spalled or tooled surfaces do not give reliable results and should be avoided. The point of impact should be at least 25 mm away from any edge or shape discontinuity.
-<br>
 
 2.  For taking a measurement, the rebound hammer should be held at right angles to the surface of the concrete member. The test can thus be conducted horizontally on vertical surfaces or vertically upwards or downwards on horizontal surfaces.
-<br><br>
 
-<img src="images/t2.png" height="220px" style="margin-left: 250px; margin-right: 250px;"><br><br>
+<img src="images/t2.png" height="220px" style="margin-left: 250px; margin-right: 250px;">
 
 3.  Press the test hammer plunger at exactly right angles to the surface of the concrete being tested. After impactread the rebound value.
-<br>
 
 4.  Take a minimum of six rebound readings around each point of observation with at least 20 mm distance from each other. Average of these readings after deleting outliers as per IS/ISO:16269 (2016) becomes the rebound index for the point of observation.
-<br>
+
 5.  Convert the rebound index to compressive strength by using the calibration chart.
 <br><br>
 
