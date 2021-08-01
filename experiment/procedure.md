@@ -10,7 +10,7 @@
 3.  Press the test hammer plunger at exactly right angles to the surface of the concrete being tested. After impactread the rebound value.
 <br>
 
-4.  Take a minimum of six rebound readingsaround each point of observation with at least 20 mm distance from each other.Average of these readings after deleting outliers as per IS/ISO:16269 (2016) becomes the rebound index for the point of observation.
+4.  Take a minimum of six rebound readings around each point of observation with at least 20 mm distance from each other. Average of these readings after deleting outliers as per IS/ISO:16269 (2016) becomes the rebound index for the point of observation.
 <br>
 5.  Convert the rebound index to compressive strength by using the calibration chart.
 <br><br>
@@ -28,25 +28,39 @@ Type of surface: Vertical / Horizontally upward / Horizontally downward:
         <th style="text-align : center; padding:10px; ">Outlier, Yes/No</th>
     </tr>
     <tr>
-        <td>1.</td><td  ></td><td ></td>
+        <td>1.</td>
+        <td></td>
+        <td ></td>
     </tr>
     <tr>
-        <td>2.</td><td ></td><td ></td>
+        <td>2.</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>3.</td><td ></td><td ></td>
+        <td>3.</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>4.</td><td ></td><td ></td>
+        <td>4.</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>5.</td><td ></td><td ></td>
+        <td>5.</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td>6.</td><td ></td><td ></td>
+        <td>6.</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
-        <td width="200px">Rebound Index (average after removing outliers)</td><td ></td><td ></td>
+        <td style="width:200px; text-align:left;">Rebound Index<br>(average after removing<br>outliers)</td>
+        <td></td>
+        <td></td>
     </tr>
 </table>
 <br>
