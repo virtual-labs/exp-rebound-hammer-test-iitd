@@ -1,7 +1,7 @@
 IS:516-Part 5/Sec 4(2018) Non-Destructive Testing of Concrete - Rebound Hammer Test
 
 
-IS:516-Part 5/Sec 1 (2018) Non-Destructive Testing of Concrete - Ultrasonic PulseVelocity Test
+IS:516-Part 5/Sec 1 (2018) Non-Destructive Testing of Concrete - Ultrasonic Pulse Velocity Test
 
 
 IS:456 (2000) Plain and Reinforced Concrete - Code of Practice
