@@ -10,14 +10,14 @@
 4.  Take a minimum of six rebound readings around each point of observation with at least 20 mm distance from each other. Average of these readings after deleting outliers as per IS/ISO:16269 (2016) becomes the rebound index for the point of observation.
 
 5.  Convert the rebound index to compressive strength by using the calibration chart.
-<br><br>
 
-<img src="images/t3.png" height="280px"  style="margin-left: 250px; margin-right: 250px;"><br><br>
+<img src="images/t3.png" height="280px"  style="margin-left: 250px; margin-right: 250px;">
 
 <strong>Observations and Calculation:</strong>
-<br>
+
+
 Type of surface: Vertical / Horizontally upward / Horizontally downward:
-<br><br>
+
 <table>
     <tr style="background-color: #000; color: #FFF;">
         <th style="text-align : center; padding:10px; width: 60px;">Serial No.</th>
@@ -60,9 +60,9 @@ Type of surface: Vertical / Horizontally upward / Horizontally downward:
         <td></td>
     </tr>
 </table>
-<br>
+
+
 Compressive strength based on rebound index: ______________
-<br><br>
 
 <strong>Results:</strong><br>
 1.  Date/period of testing:______________<br>
