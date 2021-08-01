@@ -11,8 +11,8 @@
 	"question": "2. It is essential that the rebound hammer is held at aright angle to the tested surface to avoid:",
 	"answers": {
 		"a": "Frictional sliding of the plunger tip",
-		"b": "Material removal bychipping",
-		"c": "Partial transfer of energy to and from thehammer",
+		"b": "Material removal by chipping",
+		"c": "Partial transfer of energy to and from the hammer",
 		"d": "All of the above"
 	},
 	"correctAnswer": "d"
