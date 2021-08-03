@@ -35,9 +35,9 @@ i)  Assessing the likely compressive strength of concrete,
 
 ii) Assessing the uniformity of quality of a built-up structure,
 
-iii)    Assessing the development of strength with time of the same specimen, and
+iii) Assessing the development of strength with time of the same specimen,
 
-iv) Assessing the probable damage caused by corrosive environment on concrete etc.
+iv) Assessing the probable damage caused by corrosive environment on concrete, etc.
 
 
 In general, the rebound number increases as the strength increases but it is affected by several factors like types of cement and aggregate, surface condition and moisture content, curing and age of concrete, extent of carbonation of concrete, etc. Rebound number is indicative of the compressive strength of concrete up to a limited depth from the surface. If the concrete in a particular member has internal microcracking, flaws or heterogeneity across the cross-section.
