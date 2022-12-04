@@ -67,6 +67,8 @@ Use cube specimens that should be wet-cured for 27 days, and they should be remo
 Mark at least 9 points on the surface of the sample as shown, ensuring that the points of impact must not be nearer an edge than 25 mm and should be not less than 25 mm from each other. 
 Next, the concrete cube specimens are held in a compression testing machine under a fixed load firmly.
 For taking a measurement, the rebound hammer should be held at right angles to the surface of the concrete specimen. Measurements of rebound number are done using the particular hammer/hammers for which conditions are to be established, and then the compressive strength is determined as per IS 516 (Part 1/Sec 1). 
+
+<br><br><img src="images/t4.png" style="height: 150px;margin-left: 250px;margin-right: 250px;"><br><br> 
  
  
  
