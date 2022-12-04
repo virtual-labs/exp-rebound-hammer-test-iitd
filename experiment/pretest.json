@@ -1,10 +1,10 @@
 [{
-	"question": "1.Which of the following is not an indirect test?",
+	"question": "1. Which part and section of IS 516 cover the objective, procedure, apparatus etc. of Rebound Hammer Test ?",
 	"answers": {
-		"a": "Rebound hammer test",
-		"b": " Windsor Probe",
-		"c": "Core test",
-		"d": "Ultrasound test"
+		"a": "Part 5 Sec 1",
+		"b": "Part 1 Sec 4",
+		"c": "Part 5 Sec 4",
+		"d": "Part 1 Sec 1"
 	},
 	"correctAnswer": "c"
 }, {
