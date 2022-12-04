@@ -55,3 +55,24 @@ It can be assumed that the compressive strength of concrete follows a normal dis
     </tr>
     
 </table>
+
+
+<strong>Correlation between Compressive Strength of Concrete and Rebound Number (Using Cube Compressive Strength) </strong>
+ 
+Relationships between rebound number and concrete strength that are provided by instrument manufacturers shall be used only to provide indications of relative concrete strength at different locations in a structure. To use this test method to estimate strength, it is necessary to establish a correlation between rebound number and strength for a particular concrete and particular apparatus by the method given below.
+ 
+The most satisfactory way of establishing a correlation between the compressive strength of concrete and its rebound number is to measure both properties simultaneously on concrete cubes. The correlation shall be derived on project-specific concrete cubes
+ 
+Use cube specimens that should be wet-cured for 27 days, and they should be removed from wet storage and kept in the laboratory atmosphere for about 24 h before testing. Clean the surface (with an abrasive stone) and dry the surface if needed.
+Mark at least 9 points on the surface of the sample as shown, ensuring that the points of impact must not be nearer an edge than 25 mm and should be not less than 25 mm from each other. 
+Next, the concrete cube specimens are held in a compression testing machine under a fixed load firmly.
+For taking a measurement, the rebound hammer should be held at right angles to the surface of the concrete specimen. Measurements of rebound number are done using the particular hammer/hammers for which conditions are to be established, and then the compressive strength is determined as per IS 516 (Part 1/Sec 1). 
+ 
+ 
+ 
+ 
+ 
+Precautions:
+The fixed load required is of the order of 7 N/mm2 when the impact energy of the hammer is about 2.25 Nm. The load should be increased for calibrating rebound hammers of greater impact energy and decreased for calibrating rebound hammers of lesser impact energy.
+Only the vertical faces of the cube as cast should be tested. 
+150 mm cube specimens are preferred for calibrating rebound hammers of lower impact energy (2.25 Nm). In contrast, for rebound hammers of higher impact energy, for example, 30 Nm, the test cubes should not be smaller than 300 mm. 
