@@ -2,15 +2,12 @@
 
 
 
-Q1. Which of the following is not an indirect test?<br>
+Q.1 Which part and section of IS 516 cover the objective, procedure, apparatus etc. of Rebound Hammer Test ?
+A Part 5 Sec 1 <br>
+B Part 1 Sec 4 <br>
+**C Part 5 Sec 4** <br>
+D Part 1 Sec 1 <br>
 
-A    Rebound hammer test<br>
-
-B    Windsor Probe<br>
-
-**C    Core test**<br>
-
-D    Ultrasound test<br><br>
 
 
 Q2.The principle behind rebound hammer test is_____.<br>
