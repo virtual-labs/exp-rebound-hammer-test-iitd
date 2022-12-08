@@ -1,1 +1,1 @@
-#### To test the concrete specimens by the non-destructive test methods namely rebound hammer test.
+#### To test the concrete specimens by the non-destructive test methods namely rebound-hammer test.
