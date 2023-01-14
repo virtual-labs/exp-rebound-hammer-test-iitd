@@ -16,4 +16,35 @@
 		"d": "All of the above"
 	},
 	"correctAnswer": "d"
+}
+, {
+	"question": "3. What is the minimum number of days for which the cube specimen (for establishing correlation b/w rebound number and compressive strength) needs to be wet cured before testing",
+	"answers": {
+		"a": "14",
+		"b": "7",
+		"c": "27",
+		"d": "13"
+	},
+	"correctAnswer": "c"
+}
+, {
+	"question": "4. What is the minimum number of points to be tested on a specimen for (i) Performing test on a structural element on field (ii) Establishing the correlation b/w the compressive strength and rebound number , the value of i , ii are
+",
+	"answers": {
+		"a": "5 , 8",
+		"b": "6 , 9",
+		"c": "9 , 8",
+		"d": "8 , 9"
+	},
+	"correctAnswer": "b"
+}
+, {
+	"question": "5. Identify the wrong statements (i) Rebound number increases with increase in the compressive strength of concrete (ii) Rebound number is independent of the type of aggregates used (iii) Strength of partially compacted concrete also bears a unique relationship to the rebound number (iv) A wet surface will give rise to overestimation of the strength of concrete calibrated under dry condition. (v) The effect of age can be ignored for concrete over 14 days (vi) Carbonated concrete gives an overestimation of strength of concrete (vii) In general a higher rebound number is observed near the bottom of the concrete placement", 
+	"answers": {
+		"a": "i , iii , vi",
+		"b": "iv , v , vi , vii",
+		"c": "ii , iii , iv",
+		"d": "ii , iii , iv , vi"
+	},
+	"correctAnswer": "c"
 }]
