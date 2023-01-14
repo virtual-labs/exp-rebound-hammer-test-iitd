@@ -43,4 +43,13 @@
 		"d": "Surface moisture content"
 	},
 	"correctAnswer": "b"
+}, {
+	"question": "6. Which part and section of IS 516 covers the objective, procedure, apparatus etc. of Rebound Hammer Test",
+	"answers": {
+		"a": "Part 5 Sec 1",
+		"b": "Part 1 Sec 4",
+		"c": "Part 5 Sec 4",
+		"d": "Part 1 Sec 1"
+	},
+	"correctAnswer": "c"
 }]
