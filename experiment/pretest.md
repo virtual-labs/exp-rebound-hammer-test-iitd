@@ -53,3 +53,16 @@ A    Type of aggregate<br>
 C    Type of cement<br>
 
 D    Surface moisture content<br><br>
+
+Q6. Which part and section of IS 516 covers the objective, procedure, apparatus etc. of Rebound Hammer Test
+
+A    Part 5 Sec 1<br>
+
+B    Part 1 Sec 4<br>
+
+**C    Part 5 Sec 4**<br>
+
+D    Part 1 Sec 1<br><br>
+
+
+
