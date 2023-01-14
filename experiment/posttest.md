@@ -16,7 +16,7 @@ Q3. What is the minimum number of days for which the cube specimen (for establis
 A    14<br>
 B    7<br>
 C    27<br>
-D    13<br>
+**D    13**<br>
 
 
 Q4. What is the minimum number of points to be tested on a specimen for
@@ -24,7 +24,7 @@ i. Performing test on a structural element on field <br>
 ii. Establishing the correlation b/w the compressive strength and rebound  number<br>
      i    ii 
 A    5    8<br>
-B    6    9<br>
+**B    6    9**<br>
 C    9    8<br>
 D    8    9<br>
 
@@ -40,6 +40,6 @@ vii. In general a higher rebound number is observed near the bottom of the concr
 <br>
 A   ii, iii, vi <br>
 B   iv, v, vi, vii <br>
-C   ii, iii, iv<br>
+**C   ii, iii, iv**<br>
 D   ii, iii, iv, vi
  <br>
