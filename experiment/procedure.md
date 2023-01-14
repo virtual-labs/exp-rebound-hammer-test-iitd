@@ -1,15 +1,19 @@
-### These steps will be followed for the experiment
+<strong>These steps will be followed for determining Compressive Strength at the site using our calibrated chart
+</strong>
+<br>
 1.  For testing, smooth, clean (with abrasive stone) and dry surface should be selected. Rough surfaces resulting from incomplete compaction, loss of grout, spalled or tooled surfaces do not give reliable results and should be avoided. The point of impact should be at least 25 mm away from any edge or shape discontinuity.
 
 2.  For taking a measurement, the rebound hammer should be held at right angles to the surface of the concrete member. The test can thus be conducted horizontally on vertical surfaces or vertically upwards or downwards on horizontal surfaces.
 
 <img src="images/t2.png" height="220px" style="margin-left: 250px; margin-right: 250px;">
 
-3.  Press the test hammer plunger at exactly right angles to the surface of the concrete being tested. After impactread the rebound value.
+3.  Press the test hammer plunger at exactly right angles to the surface of the concrete being tested. After impact, read the rebound value.
 
-4.  Take a minimum of six rebound readings around each point of observation with at least 20 mm distance from each other. Average of these readings after deleting outliers as per IS/ISO:16269 (2016) becomes the rebound index for the point of observation.
 
-5.  Convert the rebound index to compressive strength by using the calibration chart.
+4.  Take a minimum of six rebound readings around each point of observation with at least 20 mm distance from each other. Average of these readings after deleting outliers as per IS/ISO: 16269 (2016) becomes the rebound index for the point of observation.
+
+5.  Convert the rebound index to compressive strength by using the prepared calibration chart.
+
 
 <img src="images/t3.png" height="280px"  style="margin-left: 250px; margin-right: 250px;">
 
@@ -77,10 +81,22 @@ Compressive strength based on rebound index: ______________
 <br><br>
 
 <strong>Precautions:</strong><br>
-1.  The test surface should be smooth, clean and dry.<br>
-2.  Very high readings may be caused by rock or steel near the surface at the point of impact, and very low readings may be caused by trapped air pockets near the surface at the point of impact.<br>
-3.  Rebound hammer test should not be conducted on rough surfaces as a result of incomplete compaction, loss of grout, spalled or tooled concrete surface.<br>
-4.  For better accuracy correlation between rebound number and strength for a particular concrete and particular apparatus should be established.<br>
-5.  Rebound hammer should not be used over the same points more than once.<br>
+<ol>
+<li><strong>For preparing calibraton chart</strong>
+<br>
+<ul>
+<li>The fixed load required is of the order of 7 N/mm2 when the impact energy of the hammer is about 2.25 Nm. The load should be increased for calibrating rebound hammers of greater impact energy and decreased for calibrating rebound hammers of lesser impact energy.</li>
+<li>Only the vertical faces of the cube as cast should be tested. </li>
+<li>150 mm cube specimens are preferred for calibrating rebound hammers of lower impact energy (2.25 Nm), whereas for rebound hammers of higher impact energy, for example 30 Nm, the test cubes should not be smaller than 300 mm.</li>
+</ul>
+</li>
+<li>The test surface should be smooth, clean and dry.</li>
+<li>Very high readings may be caused by rock or steel near the surface at the point of impact, and very low readings may be caused by trapped air pockets near the surface at the point of impact.
+</li>
+<li>Rebound hammer test should not be conducted on rough surfaces as a result of incomplete compaction, loss of grout, spalled or tooled concrete surface.</li>
+<li>Rebound hammer should not be used over the same points more than once.
+ 
+</li>
+</ol>
 
 
