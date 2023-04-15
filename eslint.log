@@ -1,0 +1,201 @@
+
+/home/runner/work/exp-rebound-hammer-test-iitd/exp-rebound-hammer-test-iitd/experiment/simulation/main.js
+     1:10  warning  'navNext1' is defined but never used           no-unused-vars
+     9:10  warning  'navNext2' is defined but never used           no-unused-vars
+    17:10  warning  'navNext3' is defined but never used           no-unused-vars
+    25:10  warning  'navNext4' is defined but never used           no-unused-vars
+    33:10  warning  'navNext5' is defined but never used           no-unused-vars
+    41:10  warning  'navNext6' is defined but never used           no-unused-vars
+    48:4   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+    54:4   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+    65:10  warning  'navNext7' is defined but never used           no-unused-vars
+    73:10  warning  'navNext8' is defined but never used           no-unused-vars
+    81:10  warning  'navNext9' is defined but never used           no-unused-vars
+    88:4   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   105:10  warning  'navNext10' is defined but never used          no-unused-vars
+   113:10  warning  'navNext11' is defined but never used          no-unused-vars
+   121:10  warning  'navNext12' is defined but never used          no-unused-vars
+   128:4   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   145:10  warning  'navNext13' is defined but never used          no-unused-vars
+   152:4   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   158:10  warning  'navNext14' is defined but never used          no-unused-vars
+   165:4   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   174:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   175:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   176:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   177:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   178:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   179:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   180:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   181:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   182:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   183:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   184:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   185:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   186:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   187:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   188:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   189:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   190:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   190:3   warning  Empty block statement                          no-empty
+   191:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   192:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   196:2   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   197:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   198:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   199:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   200:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   201:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   202:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   203:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   204:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   205:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   206:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   207:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   208:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   209:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   210:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   211:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   212:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   212:3   warning  Empty block statement                          no-empty
+   213:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   214:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   218:2   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   219:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   220:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   221:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   222:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   223:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   224:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   225:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   226:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   227:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   228:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   229:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   230:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   231:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   232:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   233:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   234:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   234:3   warning  Empty block statement                          no-empty
+   235:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   236:1   warning  Mixed spaces and tabs                          no-mixed-spaces-and-tabs
+   246:10  warning  'rem1' is defined but never used               no-unused-vars
+   263:5   warning  Empty block statement                          no-empty
+   284:10  warning  'rem2' is defined but never used               no-unused-vars
+   301:5   warning  Empty block statement                          no-empty
+   318:10  warning  'rem3' is defined but never used               no-unused-vars
+   335:5   warning  Empty block statement                          no-empty
+   352:10  warning  'rem4' is defined but never used               no-unused-vars
+   369:5   warning  Empty block statement                          no-empty
+   386:10  warning  'rem5' is defined but never used               no-unused-vars
+   403:5   warning  Empty block statement                          no-empty
+   420:10  warning  'rem6' is defined but never used               no-unused-vars
+   437:5   warning  Empty block statement                          no-empty
+   459:10  warning  'navNext15' is defined but never used          no-unused-vars
+   487:5   warning  Empty block statement                          no-empty
+   509:5   warning  Empty block statement                          no-empty
+   531:5   warning  Empty block statement                          no-empty
+   542:10  warning  'navNext16' is defined but never used          no-unused-vars
+   574:5   warning  Empty block statement                          no-empty
+   596:5   warning  Empty block statement                          no-empty
+   618:5   warning  Empty block statement                          no-empty
+   633:10  warning  'selectindex' is defined but never used        no-unused-vars
+   684:10  warning  'selectcase' is defined but never used         no-unused-vars
+   715:10  warning  'addstoneups1' is defined but never used       no-unused-vars
+   725:10  warning  'usestoneups1' is defined but never used       no-unused-vars
+   733:5   warning  '$' is not defined                             no-undef
+   750:10  warning  'usemarkercond11' is defined but never used    no-unused-vars
+   823:10  warning  'usemarkercond12' is defined but never used    no-unused-vars
+   895:10  warning  'usemarkercond13' is defined but never used    no-unused-vars
+   973:10  warning  'usemarkerups11' is defined but never used     no-unused-vars
+   997:10  warning  'usemarkerups12' is defined but never used     no-unused-vars
+  1021:10  warning  'usemarkerups13' is defined but never used     no-unused-vars
+  1045:10  warning  'usemarkerups14' is defined but never used     no-unused-vars
+  1069:10  warning  'usemarkerups15' is defined but never used     no-unused-vars
+  1093:10  warning  'usemarkerups16' is defined but never used     no-unused-vars
+  1117:10  warning  'addhammerups2' is defined but never used      no-unused-vars
+  1130:10  warning  'usehammerups21' is defined but never used     no-unused-vars
+  1161:10  warning  'buttonups21' is defined but never used        no-unused-vars
+  1193:10  warning  'usehammerups31' is defined but never used     no-unused-vars
+  1219:10  warning  'buttonups31' is defined but never used        no-unused-vars
+  1251:10  warning  'usehammerups41' is defined but never used     no-unused-vars
+  1277:10  warning  'buttonups41' is defined but never used        no-unused-vars
+  1309:10  warning  'usehammerups51' is defined but never used     no-unused-vars
+  1336:10  warning  'buttonups51' is defined but never used        no-unused-vars
+  1369:10  warning  'usehammerups61' is defined but never used     no-unused-vars
+  1395:10  warning  'buttonups61' is defined but never used        no-unused-vars
+  1427:10  warning  'usehammerups71' is defined but never used     no-unused-vars
+  1453:10  warning  'buttonups71' is defined but never used        no-unused-vars
+  1486:10  warning  'usehammervs21' is defined but never used      no-unused-vars
+  1517:10  warning  'buttonvs21' is defined but never used         no-unused-vars
+  1549:10  warning  'usehammervs31' is defined but never used      no-unused-vars
+  1575:10  warning  'buttonvs31' is defined but never used         no-unused-vars
+  1607:10  warning  'usehammervs41' is defined but never used      no-unused-vars
+  1633:10  warning  'buttonvs41' is defined but never used         no-unused-vars
+  1665:10  warning  'usehammervs51' is defined but never used      no-unused-vars
+  1692:10  warning  'buttonvs51' is defined but never used         no-unused-vars
+  1725:10  warning  'usehammervs61' is defined but never used      no-unused-vars
+  1751:10  warning  'buttonvs61' is defined but never used         no-unused-vars
+  1783:10  warning  'usehammervs71' is defined but never used      no-unused-vars
+  1809:10  warning  'buttonvs71' is defined but never used         no-unused-vars
+  1847:10  warning  'usehammerds21' is defined but never used      no-unused-vars
+  1878:10  warning  'buttonds21' is defined but never used         no-unused-vars
+  1910:10  warning  'usehammerds31' is defined but never used      no-unused-vars
+  1936:10  warning  'buttonds31' is defined but never used         no-unused-vars
+  1968:10  warning  'usehammerds41' is defined but never used      no-unused-vars
+  1994:10  warning  'buttonds41' is defined but never used         no-unused-vars
+  2026:10  warning  'usehammerds51' is defined but never used      no-unused-vars
+  2053:10  warning  'buttonds51' is defined but never used         no-unused-vars
+  2086:10  warning  'usehammerds61' is defined but never used      no-unused-vars
+  2112:10  warning  'buttonds61' is defined but never used         no-unused-vars
+  2144:10  warning  'usehammerds71' is defined but never used      no-unused-vars
+  2170:10  warning  'buttonds71' is defined but never used         no-unused-vars
+  2201:10  warning  'indexsample' is defined but never used        no-unused-vars
+  2215:10  warning  'indexsample1' is defined but never used       no-unused-vars
+  2299:10  warning  'indexsample2' is defined but never used       no-unused-vars
+  2383:10  warning  'indexsample3' is defined but never used       no-unused-vars
+  2485:10  warning  'showegraph1' is defined but never used        no-unused-vars
+  2491:9   warning  'Chartist' is not defined                      no-undef
+  2515:10  warning  'showresultbtn' is defined but never used      no-unused-vars
+  2525:10  warning  'showreportbtn' is defined but never used      no-unused-vars
+  2534:10  warning  'reset' is defined but never used              no-unused-vars
+  2553:10  warning  'usehammerups22' is defined but never used     no-unused-vars
+  2567:10  warning  'buttonups22' is defined but never used        no-unused-vars
+  2586:10  warning  'usehammerups23' is defined but never used     no-unused-vars
+  2600:10  warning  'buttonups23' is defined but never used        no-unused-vars
+  2619:10  warning  'usehammerups24' is defined but never used     no-unused-vars
+  2633:10  warning  'buttonups24' is defined but never used        no-unused-vars
+  2652:10  warning  'usehammerups25' is defined but never used     no-unused-vars
+  2666:10  warning  'buttonups25' is defined but never used        no-unused-vars
+  2685:10  warning  'usehammerups26' is defined but never used     no-unused-vars
+  2699:10  warning  'buttonups26' is defined but never used        no-unused-vars
+  2718:10  warning  'addstonevs1' is defined but never used        no-unused-vars
+  2728:10  warning  'usestonevs1' is defined but never used        no-unused-vars
+  2736:5   warning  '$' is not defined                             no-undef
+  2753:10  warning  'usemarkervs11' is defined but never used      no-unused-vars
+  2777:10  warning  'usemarkervs12' is defined but never used      no-unused-vars
+  2801:10  warning  'usemarkervs13' is defined but never used      no-unused-vars
+  2825:10  warning  'usemarkervs14' is defined but never used      no-unused-vars
+  2849:10  warning  'usemarkervs15' is defined but never used      no-unused-vars
+  2873:10  warning  'usemarkervs16' is defined but never used      no-unused-vars
+  2897:10  warning  'addhammervs2' is defined but never used       no-unused-vars
+  2907:10  warning  'usessdfhammervs21' is defined but never used  no-unused-vars
+  2921:10  warning  'butdstonvs21' is defined but never used       no-unused-vars
+  2940:10  warning  'usehammervs22' is defined but never used      no-unused-vars
+  2954:10  warning  'buttonvfdffs22' is defined but never used     no-unused-vars
+  2973:10  warning  'usehammervs23' is defined but never used      no-unused-vars
+  2987:10  warning  'buttonvs23' is defined but never used         no-unused-vars
+  3006:10  warning  'usehammervs24' is defined but never used      no-unused-vars
+  3020:10  warning  'buttonvs24' is defined but never used         no-unused-vars
+  3039:10  warning  'usehammervs25' is defined but never used      no-unused-vars
+  3053:10  warning  'buttonvs25' is defined but never used         no-unused-vars
+  3072:10  warning  'usehammervs26' is defined but never used      no-unused-vars
+  3086:10  warning  'buttonvs26' is defined but never used         no-unused-vars
+  3105:10  warning  'addstoneds1' is defined but never used        no-unused-vars
+  3115:10  warning  'usestoneds1' is defined but never used        no-unused-vars
+  3123:5   warning  '$' is not defined                             no-undef
+  3139:10  warning  'addhammerds2' is defined but never used       no-unused-vars
+
+✖ 196 problems (0 errors, 196 warnings)
+
